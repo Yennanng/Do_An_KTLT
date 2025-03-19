@@ -1,0 +1,1724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Category</class>
+ <widget class="QMainWindow" name="Category">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>711</height>
+   </rect>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>25</width>
+    <height>25</height>
+   </size>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>0</y>
+      <width>861</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page_Category1">
+     <widget class="QLabel" name="label_CATEGORY">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>20</y>
+        <width>127</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(52, 60, 106);</string>
+      </property>
+      <property name="text">
+       <string>Category</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Icon_mybalance">
+      <property name="geometry">
+       <rect>
+        <x>71</x>
+        <y>80</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Home/Icon_MyBalance.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>249</y>
+        <width>71</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Transport</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Icon_expense">
+      <property name="geometry">
+       <rect>
+        <x>582</x>
+        <y>80</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Home/Icon_Expenses.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_mybalance">
+      <property name="geometry">
+       <rect>
+        <x>161</x>
+        <y>80</y>
+        <width>108</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>108</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(113, 142, 191);</string>
+      </property>
+      <property name="text">
+       <string>My Balance</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_gifts">
+      <property name="geometry">
+       <rect>
+        <x>508</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Gifts.png</normaloff>../../Images/Category/Icon_Gifts.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>69</x>
+        <y>179</y>
+        <width>721</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Icon_income">
+      <property name="geometry">
+       <rect>
+        <x>322</x>
+        <y>80</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Home/Icon_Income.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_medicine">
+      <property name="geometry">
+       <rect>
+        <x>249</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Medicine.png</normaloff>../../Images/Category/Icon_Medicine.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>250</y>
+        <width>32</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Gifts</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>249</y>
+        <width>69</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Groceries</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_groceries">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Groceries.png</normaloff>../../Images/Category/Icon_Groceries.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>250</y>
+        <width>47</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Saving</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_income">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>80</y>
+        <width>108</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>88</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(113, 142, 191);</string>
+      </property>
+      <property name="text">
+       <string>Income</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_expense">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>80</y>
+        <width>108</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>88</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(113, 142, 191);</string>
+      </property>
+      <property name="text">
+       <string>Expense</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_food">
+      <property name="geometry">
+       <rect>
+        <x>78</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Food.png</normaloff>../../Images/Category/Icon_Food.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_saving">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Saving.png</normaloff>../../Images/Category/Icon_Saving.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>250</y>
+        <width>64</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Medicine</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>300</y>
+        <width>511</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>100</y>
+         <width>1</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QTableWidget" name="table_expenses">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>491</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(231, 237, 255);</string>
+       </property>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+      </widget>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_transport">
+      <property name="geometry">
+       <rect>
+        <x>155</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Transport.png</normaloff>../../Images/Category/Icon_Transport.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>250</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Entertainment</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>250</y>
+        <width>35</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Rent</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_entertainment">
+      <property name="geometry">
+       <rect>
+        <x>678</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Entertainment.png</normaloff>../../Images/Category/Icon_Entertainment.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>249</y>
+        <width>41</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Food</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_rent">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>190</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Rent.png</normaloff>../../Images/Category/Icon_Rent.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>110</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>110</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>161</x>
+        <y>110</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_addexpenses">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>610</y>
+        <width>180</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 13, 107);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>ADD EXPENSE</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>180</width>
+        <height>45</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>label_CATEGORY</zorder>
+     <zorder>Icon_mybalance</zorder>
+     <zorder>Icon_expense</zorder>
+     <zorder>label_mybalance</zorder>
+     <zorder>label</zorder>
+     <zorder>Icon_income</zorder>
+     <zorder>radioButton_medicine</zorder>
+     <zorder>label_12</zorder>
+     <zorder>label_10</zorder>
+     <zorder>radioButton_groceries</zorder>
+     <zorder>label_13</zorder>
+     <zorder>label_income</zorder>
+     <zorder>label_expense</zorder>
+     <zorder>radioButton_food</zorder>
+     <zorder>radioButton_saving</zorder>
+     <zorder>groupBox</zorder>
+     <zorder>radioButton_transport</zorder>
+     <zorder>label_14</zorder>
+     <zorder>label_11</zorder>
+     <zorder>radioButton_entertainment</zorder>
+     <zorder>label_2</zorder>
+     <zorder>radioButton_rent</zorder>
+     <zorder>radioButton_gifts</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_9</zorder>
+     <zorder>label_19</zorder>
+     <zorder>label_20</zorder>
+     <zorder>label_21</zorder>
+     <zorder>pushButton_addexpenses</zorder>
+    </widget>
+    <widget class="QWidget" name="page_Category2">
+     <widget class="QLineEdit" name="lineEdit_Details">
+      <property name="geometry">
+       <rect>
+        <x>127</x>
+        <y>374</y>
+        <width>678</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(109, 182, 254);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Saving">
+      <property name="geometry">
+       <rect>
+        <x>596</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Saving.png</normaloff>../../Images/Category/Icon_Saving.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Icon_mybalance_2">
+      <property name="geometry">
+       <rect>
+        <x>71</x>
+        <y>80</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Home/Icon_MyBalance.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>160</y>
+        <width>810</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Food">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Food.png</normaloff>../../Images/Category/Icon_Food.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Entertainment">
+      <property name="geometry">
+       <rect>
+        <x>676</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Entertainment.png</normaloff>../../Images/Category/Icon_Entertainment.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_save">
+      <property name="geometry">
+       <rect>
+        <x>387</x>
+        <y>539</y>
+        <width>124</width>
+        <height>43</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Button_Save.png</normaloff>../../Images/Category/Button_Save.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>124</width>
+        <height>43</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_income_2">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>80</y>
+        <width>108</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>88</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(113, 142, 191);</string>
+      </property>
+      <property name="text">
+       <string>Income</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CATEGORY_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>20</y>
+        <width>127</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>17</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(52, 60, 106);</string>
+      </property>
+      <property name="text">
+       <string>Category</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Icon_income_2">
+      <property name="geometry">
+       <rect>
+        <x>322</x>
+        <y>80</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Home/Icon_Income.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>343</x>
+        <y>227</y>
+        <width>181</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>images/category/Button_AddExpenses.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Rent">
+      <property name="geometry">
+       <rect>
+        <x>437</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Rent.png</normaloff>../../Images/Category/Icon_Rent.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Amount">
+      <property name="geometry">
+       <rect>
+        <x>127</x>
+        <y>304</y>
+        <width>678</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(109, 182, 254);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Groceries">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Groceries.png</normaloff>../../Images/Category/Icon_Groceries.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Transport">
+      <property name="geometry">
+       <rect>
+        <x>205</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Transport.png</normaloff>../../Images/Category/Icon_Transport.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>126</x>
+        <y>208</y>
+        <width>76</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Date</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>126</x>
+        <y>344</y>
+        <width>206</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Details</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Icon_expense_2">
+      <property name="geometry">
+       <rect>
+        <x>582</x>
+        <y>80</y>
+        <width>70</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Home/Icon_Expenses.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>126</x>
+        <y>274</y>
+        <width>129</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Amount</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>126</x>
+        <y>439</y>
+        <width>150</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rockwell</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);
+color: rgb(9, 48, 48);</string>
+      </property>
+      <property name="text">
+       <string>Category</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Medicine">
+      <property name="geometry">
+       <rect>
+        <x>282</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Medicine.png</normaloff>../../Images/Category/Icon_Medicine.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_mybalance_2">
+      <property name="geometry">
+       <rect>
+        <x>161</x>
+        <y>80</y>
+        <width>108</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>108</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(113, 142, 191);</string>
+      </property>
+      <property name="text">
+       <string>My Balance</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_Gifts">
+      <property name="geometry">
+       <rect>
+        <x>514</x>
+        <y>469</y>
+        <width>73</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(231, 237, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Images/Category/Icon_Gifts.png</normaloff>../../Images/Category/Icon_Gifts.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QDateTimeEdit" name="dateTimeEdit">
+      <property name="geometry">
+       <rect>
+        <x>126</x>
+        <y>233</y>
+        <width>678</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(109, 182, 254);
+color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_expense_2">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>80</y>
+        <width>108</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>88</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(113, 142, 191);</string>
+      </property>
+      <property name="text">
+       <string>Expense</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>161</x>
+        <y>110</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>415</x>
+        <y>110</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>110</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>Icon_mybalance_2</zorder>
+     <zorder>label_4</zorder>
+     <zorder>radioButton_Food</zorder>
+     <zorder>radioButton_Entertainment</zorder>
+     <zorder>pushButton_save</zorder>
+     <zorder>label_income_2</zorder>
+     <zorder>label_CATEGORY_2</zorder>
+     <zorder>Icon_income_2</zorder>
+     <zorder>label_5</zorder>
+     <zorder>radioButton_Rent</zorder>
+     <zorder>lineEdit_Amount</zorder>
+     <zorder>radioButton_Groceries</zorder>
+     <zorder>radioButton_Transport</zorder>
+     <zorder>label_6</zorder>
+     <zorder>label_7</zorder>
+     <zorder>Icon_expense_2</zorder>
+     <zorder>label_8</zorder>
+     <zorder>label_15</zorder>
+     <zorder>radioButton_Medicine</zorder>
+     <zorder>label_mybalance_2</zorder>
+     <zorder>radioButton_Gifts</zorder>
+     <zorder>dateTimeEdit</zorder>
+     <zorder>label_expense_2</zorder>
+     <zorder>lineEdit_Details</zorder>
+     <zorder>radioButton_Saving</zorder>
+     <zorder>label_16</zorder>
+     <zorder>label_17</zorder>
+     <zorder>label_18</zorder>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="Icon_menu">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Images/Home/Icon_Menu.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_menu">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(52, 60, 106);</string>
+    </property>
+    <property name="text">
+     <string>Menu</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>160</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_Home">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Home</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Home/Icon_Home.png</normaloff>../../Images/Home/Icon_Home.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Transaction">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Transaction</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Home/Icon_Transaction.png</normaloff>../../Images/Home/Icon_Transaction.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Category">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Category</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Category/Icon_Category.png</normaloff>../../Images/Category/Icon_Category.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Account">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Account</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Home/Icon_Setting.png</normaloff>../../Images/Home/Icon_Setting.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>440</y>
+      <width>200</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Images/Transaction/trangtri.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1080</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
