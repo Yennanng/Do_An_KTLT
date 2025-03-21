@@ -455,6 +455,12 @@ color: rgb(255, 235, 0);
       <zorder>checkShowPassword</zorder>
       <zorder>pushLogin</zorder>
      </widget>
+     <zorder>label_3</zorder>
+     <zorder>background</zorder>
+     <zorder>label_app</zorder>
+     <zorder>label_frame</zorder>
+     <zorder>groupBox</zorder>
+     <zorder>label_welcome</zorder>
     </widget>
     <widget class="QWidget" name="page_Signup">
      <widget class="QLabel" name="label_frame_2">
@@ -510,25 +516,6 @@ font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
       </property>
       <property name="text">
        <string>FINANCE ASSISTANT</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushSign_in">
-      <property name="geometry">
-       <rect>
-        <x>305</x>
-        <y>590</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
-background-color: rgb(0, 13, 107);
-color: rgb(255, 235, 0);
-</string>
-      </property>
-      <property name="text">
-       <string>Sign in</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_welcome_2">
@@ -822,6 +809,31 @@ border-radius: 15px</string>
         <pixmap>../../Images/Login/LogoFIS.png</pixmap>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_Signin">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>560</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(1, 14, 108);
+color: rgb(255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>Signin</string>
+       </property>
+      </widget>
       <zorder>label_9</zorder>
       <zorder>label_5</zorder>
       <zorder>logoUEL_5</zorder>
@@ -835,6 +847,7 @@ border-radius: 15px</string>
       <zorder>lineConfirm_2</zorder>
       <zorder>checkShowPassword_3</zorder>
       <zorder>pushRegister_2</zorder>
+      <zorder>pushButton_Signin</zorder>
      </widget>
      <widget class="QLabel" name="background_2">
       <property name="geometry">
@@ -871,6 +884,9 @@ border-radius: 15px</string>
       <property name="pixmap">
        <pixmap>../../Images/Login/BG.png</pixmap>
       </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
      </widget>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
@@ -900,12 +916,11 @@ border-radius: 15px</string>
        <string/>
       </property>
      </widget>
-     <zorder>background_2</zorder>
      <zorder>label_6</zorder>
      <zorder>label_frame_2</zorder>
      <zorder>label_app_2</zorder>
-     <zorder>pushSign_in</zorder>
      <zorder>label_welcome_2</zorder>
+     <zorder>background_2</zorder>
      <zorder>groupBox_2</zorder>
     </widget>
    </widget>

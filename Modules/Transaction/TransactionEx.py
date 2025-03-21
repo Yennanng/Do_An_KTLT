@@ -3,7 +3,7 @@ import sys
 from PyQt6.QtCore import Qt, QDate
 from PyQt6.QtGui import QFont
 from PyQt6.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
-from Modules.Transaction.Transaction import Ui_Transaction
+from Modules.Transaction.Transaction_View import Ui_Transaction
 from Api.MainAPI import API
 from bson import ObjectId
 from pymongo import MongoClient
@@ -71,7 +71,7 @@ class MainWindowEx_Transaction(QMainWindow, API):
 
     def set_category_radio(self, category):
         category_map = {
-            "Food": self.p_Transaction.radioButton_Food,
+            "Foods": self.p_Transaction.radioButton_Food,
             "Transport": self.p_Transaction.radioButton_Transport,
             "Medicine": self.p_Transaction.radioButton_Medicine,
             "Groceries": self.p_Transaction.radioButton_Groceries,
@@ -96,7 +96,7 @@ class MainWindowEx_Transaction(QMainWindow, API):
 
         selected_category = None
         category_map = {
-            "Food": self.p_Transaction.radioButton_Food,
+            "Foods": self.p_Transaction.radioButton_Food,
             "Transport": self.p_Transaction.radioButton_Transport,
             "Medicine": self.p_Transaction.radioButton_Medicine,
             "Groceries": self.p_Transaction.radioButton_Groceries,

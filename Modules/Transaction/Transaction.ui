@@ -76,7 +76,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Home/Icon_Home.png</normaloff>../../Images/Home/Icon_Home.png</iconset>
+         <normaloff>../../Images/Transaction/Icon_Home.png</normaloff>../../Images/Transaction/Icon_Home.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -102,12 +102,15 @@
          <bold>true</bold>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
        <property name="text">
         <string>Transaction</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Home/Icon_Transaction.png</normaloff>../../Images/Home/Icon_Transaction.png</iconset>
+         <normaloff>../../Images/Transaction/Icon_Transaction.png</normaloff>../../Images/Transaction/Icon_Transaction.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -138,7 +141,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Category/Icon_Category.png</normaloff>../../Images/Category/Icon_Category.png</iconset>
+         <normaloff>../../Images/Home/Icon_Category.png</normaloff>../../Images/Home/Icon_Category.png</iconset>
        </property>
        <property name="iconSize">
         <size>

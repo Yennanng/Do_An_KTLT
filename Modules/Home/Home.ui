@@ -27,110 +27,11 @@
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>389</x>
-      <y>59</y>
-      <width>121</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(113, 142, 191)</string>
-    </property>
-    <property name="text">
-     <string>My Balance</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>299</x>
-      <y>54</y>
-      <width>70</width>
-      <height>70</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Images/Home/Icon_MyBalance.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>631</x>
-      <y>59</y>
-      <width>121</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(113, 142, 191)</string>
-    </property>
-    <property name="text">
-     <string>Income</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>541</x>
-      <y>54</y>
-      <width>70</width>
-      <height>70</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Images/Home/Icon_Income.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>888</x>
-      <y>59</y>
-      <width>121</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(113, 142, 191)</string>
-    </property>
-    <property name="text">
-     <string>Expense</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>798</x>
-      <y>54</y>
-      <width>70</width>
-      <height>70</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Images/Home/Icon_Expenses.png</pixmap>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>249</x>
-      <y>130</y>
+      <x>250</x>
+      <y>170</y>
       <width>261</width>
       <height>50</height>
      </rect>
@@ -141,73 +42,6 @@ color: rgb(19, 23, 221);</string>
     </property>
     <property name="text">
      <string>Dashboard</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_welcome">
-    <property name="geometry">
-     <rect>
-      <x>249</x>
-      <y>179</y>
-      <width>157</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(0, 0, 0)</string>
-    </property>
-    <property name="text">
-     <string>Welcome, Phuc</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_10">
-    <property name="geometry">
-     <rect>
-      <x>406</x>
-      <y>179</y>
-      <width>25</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>6</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Images/Home/Icon_Hello.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>249</x>
-      <y>212</y>
-      <width>450</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 8pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(113, 142, 191);</string>
-    </property>
-    <property name="text">
-     <string>Ready to take control of your spending? Let's get started!</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox">
@@ -286,7 +120,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>950</x>
-      <y>130</y>
+      <y>150</y>
       <width>80</width>
       <height>80</height>
      </rect>
@@ -365,6 +199,9 @@ color: rgb(19, 23, 221);</string>
          <bold>true</bold>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
        <property name="text">
         <string>Home</string>
        </property>
@@ -432,7 +269,7 @@ color: rgb(19, 23, 221);</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Category/Icon_Category.png</normaloff>../../Images/Category/Icon_Category.png</iconset>
+         <normaloff>../../Images/Home/Icon_Category.png</normaloff>../../Images/Home/Icon_Category.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -475,39 +312,189 @@ color: rgb(19, 23, 221);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_mybalance">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>90</y>
-      <width>121</width>
-      <height>31</height>
+      <x>361</x>
+      <y>80</y>
+      <width>108</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>108</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(113, 142, 191);</string>
+    </property>
+    <property name="text">
+     <string>My Balance</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_income">
+    <property name="geometry">
+     <rect>
+      <x>615</x>
+      <y>80</y>
+      <width>108</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>108</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(113, 142, 191);</string>
+    </property>
+    <property name="text">
+     <string>Income</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Icon_mybalance">
+    <property name="geometry">
+     <rect>
+      <x>271</x>
+      <y>80</y>
+      <width>70</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>70</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Images/Home/Icon_MyBalance.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Icon_income">
+    <property name="geometry">
+     <rect>
+      <x>522</x>
+      <y>80</y>
+      <width>70</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>70</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Images/Home/Icon_Income.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Icon_expense">
+    <property name="geometry">
+     <rect>
+      <x>782</x>
+      <y>80</y>
+      <width>70</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>70</width>
+      <height>70</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Images/Home/Icon_Expenses.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_setincome">
+    <property name="geometry">
+     <rect>
+      <x>615</x>
+      <y>110</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="label_setmybalance">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>80</y>
-      <width>121</width>
-      <height>31</height>
+      <x>361</x>
+      <y>110</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_15">
+   <widget class="QLabel" name="label_expense">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>870</x>
       <y>80</y>
-      <width>121</width>
-      <height>31</height>
+      <width>108</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>88</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(113, 142, 191);</string>
+    </property>
+    <property name="text">
+     <string>Expense</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_setexpense">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>110</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">

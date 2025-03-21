@@ -50,7 +50,7 @@ class MainWindowEx_Category(QMainWindow,API):
         # Xác định danh mục được chọn
         selected_category = None
         self.radio_buttons2 = {
-            "Food": self.category.radioButton_Food,
+            "Foods": self.category.radioButton_Food,
             "Transport": self.category.radioButton_Transport,
             "Medicine": self.category.radioButton_Medicine,
             "Groceries": self.category.radioButton_Groceries,
@@ -127,17 +127,21 @@ class MainWindowEx_Category(QMainWindow,API):
 
     def load_expense_history(self, categories_filter=None):
         """Đọc dữ liệu từ MongoDB và hiển thị trên bảng."""
-
-        # Pipeline truy vấn MongoDB
+        # query = {"Categories": categories_filter} if categories_filter else {}
+        # expenses = list(self.expenses_collection.find(query))
+        # query= {"Username1": {"$elemMatch": {"Categories": categories_filter}}} if categories_filter else {}
+        # expenses = list(self.expenses_collection.find(query))
+        # print(expenses)
+        # final_expenses=expenses[0]["Username1"] #[{"_id":"","Username1":[{},{},..]}]
         pipeline = [
-            {"$match": {"Username1": {"$exists": True}}},  # Lọc document có Username1
+            {"$match": {"Username1": {"$exists": True}}},  # Tìm document có "Rent"
             {"$project": {
-                "_id": 0,
+                "_id": 0,  # Ẩn _id
                 "Username1": {
                     "$filter": {
                         "input": "$Username1",
                         "as": "item",
-                        "cond": {"$eq": ["$$item.Categories", categories_filter]} if categories_filter else True
+                        "cond": {"$eq": ["$$item.Categories", categories_filter]}
                     }
                 }
             }}
@@ -150,20 +154,18 @@ class MainWindowEx_Category(QMainWindow,API):
             print("No matching data found.")
             self.category.table_expenses.setRowCount(0)  # Xóa hết dữ liệu cũ nếu không có dữ liệu mới
             return
-
-        # Lấy danh sách chi tiêu từ Username1
-        final_expenses = result[0]["Username1"]
-
-        # Cập nhật số dòng của bảng
-        self.category.table_expenses.setRowCount(len(final_expenses))
-
-        # Đổ dữ liệu vào bảng
+        else:
+            print(result)
+            final_expenses=result[0]["Username1"] #[{"_id":"","Username1":[{},{}}]}]
+            # print(final_expenses)
+            self.category.table_expenses.setRowCount(len(final_expenses))
         for row, expense in enumerate(final_expenses):
-            self.category.table_expenses.setItem(row, 0, QTableWidgetItem(str(expense.get("Categories", ""))))
-            self.category.table_expenses.setItem(row, 1, QTableWidgetItem(expense.get("Details", "")))
-            self.category.table_expenses.setItem(row, 2, QTableWidgetItem(str(expense.get("Amount", ""))))
-            self.category.table_expenses.setItem(row, 3, QTableWidgetItem(expense.get("Date", "")))
-
+            print(row,expense)
+            self.category.table_expenses.setItem(row, 0, QTableWidgetItem(str(expense["Categories"])))
+            self.category.table_expenses.setItem(row, 1, QTableWidgetItem(expense["Details"]))
+            self.category.table_expenses.setItem(row, 2, QTableWidgetItem(str(expense["Amount"])))
+            self.category.table_expenses.setItem(row, 3, QTableWidgetItem(str(expense["Date"])))
+            # self.category.table_expenses.setItem(row, 4, QTableWidgetItem(str(products["Date"])))
 
     def filter_data(self, checked, category):
         """Lọc dữ liệu theo danh mục."""
