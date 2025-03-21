@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1080</width>
-    <height>600</height>
+    <height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -64,7 +64,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Home/Icon_Home.png</normaloff>../../Images/Home/Icon_Home.png</iconset>
+         <normaloff>../../Images/Transaction/Icon_Home.png</normaloff>../../Images/Transaction/Icon_Home.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -126,7 +126,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Category/Icon_Category.png</normaloff>../../Images/Category/Icon_Category.png</iconset>
+         <normaloff>../../Images/Home/Icon_Category.png</normaloff>../../Images/Home/Icon_Category.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -152,12 +152,15 @@
          <bold>true</bold>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
+       </property>
        <property name="text">
         <string>Account</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Home/Icon_Setting.png</normaloff>../../Images/Home/Icon_Setting.png</iconset>
+         <normaloff>../../Images/Account/Icon_Account.png</normaloff>../../Images/Account/Icon_Account.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -168,6 +171,10 @@
       </widget>
      </item>
     </layout>
+    <zorder>pushButton_Account</zorder>
+    <zorder>pushButton_Home</zorder>
+    <zorder>pushButton_Transaction</zorder>
+    <zorder>pushButton_Category</zorder>
    </widget>
    <widget class="QLabel" name="label_menu">
     <property name="geometry">
@@ -194,8 +201,8 @@
    <widget class="QLabel" name="label_31">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>310</y>
+      <x>20</x>
+      <y>440</y>
       <width>200</width>
       <height>200</height>
      </rect>
@@ -208,37 +215,6 @@
     </property>
     <property name="scaledContents">
      <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_addexpenses_2">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>601</y>
-      <width>180</width>
-      <height>45</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiBold</family>
-      <pointsize>18</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 13, 107);
-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>ADD EXPENSE</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>180</width>
-      <height>45</height>
-     </size>
     </property>
    </widget>
    <widget class="QLabel" name="label_22">
@@ -278,7 +254,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>300</y>
+      <y>340</y>
       <width>731</width>
       <height>41</height>
      </rect>
@@ -291,7 +267,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>480</x>
-      <y>60</y>
+      <y>90</y>
       <width>211</width>
       <height>121</height>
      </rect>
@@ -313,7 +289,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>380</y>
+      <y>420</y>
       <width>731</width>
       <height>41</height>
      </rect>
@@ -326,7 +302,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>460</y>
+      <y>500</y>
       <width>731</width>
       <height>41</height>
      </rect>
@@ -339,7 +315,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>190</y>
+      <y>230</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -360,7 +336,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>220</y>
+      <y>260</y>
       <width>721</width>
       <height>41</height>
      </rect>
@@ -384,7 +360,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>270</y>
+      <y>310</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -405,7 +381,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>350</y>
+      <y>390</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -426,7 +402,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>430</y>
+      <y>470</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -447,7 +423,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>510</x>
-      <y>170</y>
+      <y>210</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -477,7 +453,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>520</y>
+      <y>570</y>
       <width>91</width>
       <height>31</height>
      </rect>

@@ -45,7 +45,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_Category1">
      <widget class="QLabel" name="label_CATEGORY">
@@ -1582,7 +1582,7 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../Images/Home/Icon_Home.png</normaloff>../../Images/Home/Icon_Home.png</iconset>
+         <normaloff>../../Images/Transaction/Icon_Home.png</normaloff>../../Images/Transaction/Icon_Home.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1638,6 +1638,9 @@ color: rgb(255, 255, 255);</string>
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 255);</string>
        </property>
        <property name="text">
         <string>Category</string>

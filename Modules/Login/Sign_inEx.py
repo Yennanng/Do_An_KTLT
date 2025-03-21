@@ -21,6 +21,7 @@ class Login_EX(QMainWindow):
         self.p_Login.stackedWidget.setCurrentWidget(self.p_Login.page_Signin)
         self.p_Login.checkShowPassword_3.stateChanged.connect(self.show_password2)
         self.p_Login.pushRegister_2.clicked.connect(self.register)
+        self.p_Login.pushButton_Signin.clicked.connect(self.open_signin)
 
     def login(self):
         """ Xử lý đăng nhập """
@@ -49,6 +50,9 @@ class Login_EX(QMainWindow):
     def open_signup(self):
         """ Chuyển sang trang đăng ký """
         self.p_Login.stackedWidget.setCurrentWidget(self.p_Login.page_Signup)
+
+    def open_signin(self):
+        self.p_Login.stackedWidget.setCurrentWidget(self.p_Login.page_Signin)
 
     def show_password2(self):
         """ Hiển thị hoặc ẩn mật khẩu trên trang đăng ký """
