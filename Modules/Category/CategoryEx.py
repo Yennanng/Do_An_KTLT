@@ -6,24 +6,23 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt
 from Modules.Category.Category import Ui_Category
 from pymongo import MongoClient
-
-client = MongoClient("mongodb://localhost:27017/")
-db = client["chi_tieu"]
-collection = db["database"]
+from Api.MainAPI import API
 
 
-class MainWindowEx_Category(QMainWindow):
+
+class MainWindowEx_Category(QMainWindow,API):
     def __init__(self):
         super().__init__()
         self.category = Ui_Category()
         self.category.setupUi(self)
         self.load_expense_history()
+        self.connector()
 
     def setupUi(self):
         """Cấu hình bảng để hiển thị dữ liệu từ MongoDB."""
-        self.category.table_expenses.setColumnCount(5)
-        self.category.table_expenses.setHorizontalHeaderLabels(["Id", "Categories", "Details", "Amount", "Date"])
-        self.category.table_expenses.setColumnHidden(0, True)  # Ẩn cột ID
+        self.category.table_expenses.setColumnCount(4)
+        self.category.table_expenses.setHorizontalHeaderLabels([ "Categories", "Details", "Amount", "Date"])
+        # self.category.table_expenses.setColumnHidden(0, True)  # Ẩn cột ID
         self.category.dateTimeEdit.setDate(QDate.currentDate())
         # Kết nối các nút với hàm tương ứng
         self.category.pushButton_Category.clicked.connect(
@@ -34,7 +33,7 @@ class MainWindowEx_Category(QMainWindow):
 
         # Kết nối radio button với bộ lọc
         self.radio_buttons = {
-            "Food": self.category.radioButton_food,
+            "Foods": self.category.radioButton_food,
             "Transport": self.category.radioButton_transport,
             "Medicine": self.category.radioButton_medicine,
             "Groceries": self.category.radioButton_groceries,
@@ -60,6 +59,7 @@ class MainWindowEx_Category(QMainWindow):
             "Saving": self.category.radioButton_Saving,
             "Entertainment": self.category.radioButton_Entertainment,
         }
+        #cho chạy để xem cái nào dc select
         for category, button in self.radio_buttons2.items():
             if button.isChecked():
                 selected_category = category
@@ -75,7 +75,7 @@ class MainWindowEx_Category(QMainWindow):
         date_text = self.category.dateTimeEdit.dateTime().toString("dd-MM-yyyy")
 
         # Kiểm tra dữ liệu hợp lệ
-        if not details or not amount_text:
+        if not details or not amount_text or not date_text:
             QMessageBox.warning(self, "Error", "Details and Amount cannot be empty!")
             return
 
@@ -94,42 +94,76 @@ class MainWindowEx_Category(QMainWindow):
             "Amount": amount,
             "Date": date_text
         }
-        result = collection.insert_one(new_expense)
+        # add ở vị trí index 0 để tối ưu cái bước vẽ chart cột
+        result = self.expenses_collection.update_one(
+        {"Username1": {"$exists": True}},
+        {"$push": {"Username1": {"$each": [new_expense], "$position": 0}}}
+    )
 
-        if result.inserted_id:
-            QMessageBox.information(self, "Success", "Expense saved successfully!")
+        # if result.inserted_id:
+        QMessageBox.information(self, "Success", "Expense saved successfully!")
 
-            # Thêm vào bảng giao diện
-            row = self.category.table_expenses.rowCount()
-            self.category.table_expenses.insertRow(row)
-            self.category.table_expenses.setItem(row, 0, QTableWidgetItem(str(result.inserted_id)))
-            self.category.table_expenses.setItem(row, 1, QTableWidgetItem(selected_category))
-            self.category.table_expenses.setItem(row, 2, QTableWidgetItem(details))
-            self.category.table_expenses.setItem(row, 3, QTableWidgetItem(str(amount)))
-            self.category.table_expenses.setItem(row, 4, QTableWidgetItem(date_text))
+        # # Thêm vào bảng giao diện
+        row = self.category.table_expenses.rowCount()
+        self.category.table_expenses.insertRow(row)
+        document = self.expenses_collection.find_one({}, {"Username1": 1, "_id": 0})
+        products = document['Username1']
+        for product in products:
+            self.category.table_expenses.setItem(row, 0, QTableWidgetItem(str(product["Categories"])))
+            self.category.table_expenses.setItem(row, 1, QTableWidgetItem(str(product["Details"])))
+            self.category.table_expenses.setItem(row, 2, QTableWidgetItem(str(product["Amount"])))
+            self.category.table_expenses.setItem(row, 3, QTableWidgetItem(str(product["Date"])))
+            # self.category.table_expenses.setItem(row, 4, QTableWidgetItem(date_text))
 
-            # Xóa dữ liệu nhập sau khi lưu
-            self.category.lineEdit_Details.clear()
-            self.category.lineEdit_Amount.clear()
-            self.category.dateTimeEdit.setDateTime(datetime.now())
+        # Xóa dữ liệu nhập sau khi lưu
+        self.category.lineEdit_Details.clear()
+        self.category.lineEdit_Amount.clear()
+        self.category.dateTimeEdit.setDateTime(datetime.now())
 
             # Cập nhật danh sách chi tiêu
-            self.load_expense_history()
-        else:
-            QMessageBox.warning(self, "Error", "Failed to save expense. Please try again.")
+        self.load_expense_history()
+        # else:
+        #     QMessageBox.warning(self, "Error", "Failed to save expense. Please try again.")
 
     def load_expense_history(self, categories_filter=None):
         """Đọc dữ liệu từ MongoDB và hiển thị trên bảng."""
-        query = {"Categories": categories_filter} if categories_filter else {}
-        expenses = list(collection.find(query))
 
-        self.category.table_expenses.setRowCount(len(expenses))
-        for row, expense in enumerate(expenses):
-            self.category.table_expenses.setItem(row, 0, QTableWidgetItem(str(expense["_id"])))
-            self.category.table_expenses.setItem(row, 1, QTableWidgetItem(expense["Categories"]))
-            self.category.table_expenses.setItem(row, 2, QTableWidgetItem(expense["Details"]))
-            self.category.table_expenses.setItem(row, 3, QTableWidgetItem(str(expense["Amount"])))
-            self.category.table_expenses.setItem(row, 4, QTableWidgetItem(str(expense["Date"])))
+        # Pipeline truy vấn MongoDB
+        pipeline = [
+            {"$match": {"Username1": {"$exists": True}}},  # Lọc document có Username1
+            {"$project": {
+                "_id": 0,
+                "Username1": {
+                    "$filter": {
+                        "input": "$Username1",
+                        "as": "item",
+                        "cond": {"$eq": ["$$item.Categories", categories_filter]} if categories_filter else True
+                    }
+                }
+            }}
+        ]
+
+        result = list(self.expenses_collection.aggregate(pipeline))
+
+        # Kiểm tra nếu kết quả rỗng
+        if not result or "Username1" not in result[0]:
+            print("No matching data found.")
+            self.category.table_expenses.setRowCount(0)  # Xóa hết dữ liệu cũ nếu không có dữ liệu mới
+            return
+
+        # Lấy danh sách chi tiêu từ Username1
+        final_expenses = result[0]["Username1"]
+
+        # Cập nhật số dòng của bảng
+        self.category.table_expenses.setRowCount(len(final_expenses))
+
+        # Đổ dữ liệu vào bảng
+        for row, expense in enumerate(final_expenses):
+            self.category.table_expenses.setItem(row, 0, QTableWidgetItem(str(expense.get("Categories", ""))))
+            self.category.table_expenses.setItem(row, 1, QTableWidgetItem(expense.get("Details", "")))
+            self.category.table_expenses.setItem(row, 2, QTableWidgetItem(str(expense.get("Amount", ""))))
+            self.category.table_expenses.setItem(row, 3, QTableWidgetItem(expense.get("Date", "")))
+
 
     def filter_data(self, checked, category):
         """Lọc dữ liệu theo danh mục."""

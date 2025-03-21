@@ -4,30 +4,38 @@ from PyQt6.QtCore import Qt, QDate
 from PyQt6.QtGui import QFont
 from PyQt6.QtWidgets import QMainWindow, QTableWidgetItem, QMessageBox
 from Modules.Transaction.Transaction import Ui_Transaction
+from Api.MainAPI import API
 from bson import ObjectId
 from pymongo import MongoClient
 
-client = MongoClient("mongodb://localhost:27017/")
-db = client["chi_tieu"]
-collection = db["database"]
+# from temp import expenses_collection
 
 
-class MainWindowEx_Transaction(QMainWindow):
+# from temp import expenses_collection
+
+# client = MongoClient("mongodb://localhost:27017/")
+# db = client["Group11"]
+# collection = db["expenses"]
+
+
+class MainWindowEx_Transaction(QMainWindow, API):
     def __init__(self):
         super().__init__()
-        self.selected_id = None
+        # self.selected_id = None
+        self.category=None
         self.p_Transaction = Ui_Transaction()
         self.p_Transaction.setupUi(self)
+        self.connector()
 
     def setupUi(self):
-        self.p_Transaction.tableWidgetProduct.setColumnCount(5)
+        self.p_Transaction.tableWidgetProduct.setColumnCount(4)
         self.p_Transaction.tableWidgetProduct.setHorizontalHeaderLabels(
-            ["Id", "Categories", "Details", "Amount", "Date"])
-        self.p_Transaction.tableWidgetProduct.setColumnHidden(0, True)
+            ["Categories", "Details", "Amount", "Date"])
+        # self.p_Transaction.tableWidgetProduct.setColumnHidden(0, True)
+        self.p_Transaction.tableWidgetProduct.setColumnWidth(0, 150)
         self.p_Transaction.tableWidgetProduct.setColumnWidth(1, 150)
         self.p_Transaction.tableWidgetProduct.setColumnWidth(2, 150)
         self.p_Transaction.tableWidgetProduct.setColumnWidth(3, 150)
-        self.p_Transaction.tableWidgetProduct.setColumnWidth(4, 150)
         self.p_Transaction.pushButton_Transaction_2.clicked.connect(
             lambda: self.p_Transaction.stackedWidget.setCurrentWidget(self.p_Transaction.page_Transaction1))
         self.load_data()
@@ -37,23 +45,27 @@ class MainWindowEx_Transaction(QMainWindow):
         self.p_Transaction.pushButton_Edit.clicked.connect(self.open_edit_page)
         self.p_Transaction.pushButton_Delete.clicked.connect(self.Delete)
         self.p_Transaction.pushButton_save_2.clicked.connect(self.process_update)
+        # self.connector()
+        # current_row = self.p_Transaction.tableWidgetProduct.currentRow()
+
 
     def enable_edit_button(self):
         self.p_Transaction.pushButton_Edit.setEnabled(bool(self.p_Transaction.tableWidgetProduct.selectedItems()))
 
     def open_edit_page(self):
         current_row = self.p_Transaction.tableWidgetProduct.currentRow()
+        # global current_row
         if current_row >= 0:
-            self.selected_id = self.p_Transaction.tableWidgetProduct.item(current_row, 0).text()
+            # self.selected_id = self.p_Transaction.tableWidgetProduct.item(current_row, 0).text()
             self.p_Transaction.lineEdit_Details.setText(
-                self.p_Transaction.tableWidgetProduct.item(current_row, 2).text())
+                self.p_Transaction.tableWidgetProduct.item(current_row, 1).text())
             self.p_Transaction.lineEdit_Amount.setText(
-                self.p_Transaction.tableWidgetProduct.item(current_row, 3).text())
+                self.p_Transaction.tableWidgetProduct.item(current_row, 2).text())
             self.p_Transaction.dateTimeEdit.setDate(
-                QDate.fromString(self.p_Transaction.tableWidgetProduct.item(current_row, 4).text(), "dd-MM-yyyy"))
+                QDate.fromString(self.p_Transaction.tableWidgetProduct.item(current_row, 3).text(), "dd-MM-yyyy"))
 
-            category = self.p_Transaction.tableWidgetProduct.item(current_row, 1).text().strip()
-            self.set_category_radio(category)
+            self.category = self.p_Transaction.tableWidgetProduct.item(current_row, 0).text().strip()
+            self.set_category_radio(self.category)
 
             self.p_Transaction.stackedWidget.setCurrentWidget(self.p_Transaction.page_Transaction2)
 
@@ -72,7 +84,9 @@ class MainWindowEx_Transaction(QMainWindow):
             button.setChecked(key == category)
 
     def process_update(self):
-        if not self.selected_id:
+        current_row = self.p_Transaction.tableWidgetProduct.currentRow()
+        # global current_row
+        if not self.category:
             QMessageBox.warning(self, "Warning", "Please select an item to update!")
             return
 
@@ -107,24 +121,33 @@ class MainWindowEx_Transaction(QMainWindow):
         except ValueError:
             QMessageBox.warning(self, "Error", "Amount must be a positive number!")
             return
-
-        collection.update_one({"_id": ObjectId(self.selected_id)},
-                              {"$set": {"Categories": selected_category, "Details": new_details, "Amount": amount,
-                                        "Date": new_date}})
+#Cần update cái này
+        # collection.update_one({"_id": ObjectId(self.category)},
+        #                       {"$set": {"Categories": selected_category, "Details": new_details, "Amount": amount, "Date": new_date}})
+        self.expenses_collection.update_one(
+            {"Username1": {"$exists": True}},  # Điều kiện tìm kiếm
+            {"$set": {f"Username1.{current_row}": {
+                "Categories": selected_category,
+                "Details": new_details,
+                "Amount": amount,
+                "Date": new_date
+            }}}
+        )
 
         self.load_data()
         QMessageBox.information(self, "Success", "Expense updated successfully!")
         self.p_Transaction.stackedWidget.setCurrentWidget(self.p_Transaction.page_Transaction1)
 
     def load_data(self):
-        products = list(collection.find({}))
+        document = self.expenses_collection.find_one({}, {"Username1": 1, "_id": 0})
+        products=document['Username1']
         self.p_Transaction.tableWidgetProduct.setRowCount(len(products))
         for row, product in enumerate(products):
-            self.p_Transaction.tableWidgetProduct.setItem(row, 0, QTableWidgetItem(str(product["_id"])))
-            self.p_Transaction.tableWidgetProduct.setItem(row, 1, QTableWidgetItem(product["Categories"]))
-            self.p_Transaction.tableWidgetProduct.setItem(row, 2, QTableWidgetItem(product["Details"]))
-            self.p_Transaction.tableWidgetProduct.setItem(row, 3, QTableWidgetItem(str(product["Amount"])))
-            self.p_Transaction.tableWidgetProduct.setItem(row, 4, QTableWidgetItem(str(product["Date"])))
+            self.p_Transaction.tableWidgetProduct.setItem(row, 0, QTableWidgetItem(str(product["Categories"])))
+            self.p_Transaction.tableWidgetProduct.setItem(row, 1, QTableWidgetItem(str(product["Details"])))
+            self.p_Transaction.tableWidgetProduct.setItem(row, 2, QTableWidgetItem(str(product["Amount"])))
+            self.p_Transaction.tableWidgetProduct.setItem(row, 3, QTableWidgetItem(str(product["Date"])))
+            # self.p_Transaction.tableWidgetProduct.setItem(row, 4, QTableWidgetItem(str(product["Date"])))
 
     def Delete(self):
         current_row = self.p_Transaction.tableWidgetProduct.currentRow()
@@ -132,10 +155,22 @@ class MainWindowEx_Transaction(QMainWindow):
             reply = QMessageBox.question(self, "Delete Confirmation", "Are you sure?",
                                          QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
             if reply == QMessageBox.StandardButton.Yes:
-                selected_id = self.p_Transaction.tableWidgetProduct.item(current_row, 0).text()
-                collection.delete_one({"_id": ObjectId(selected_id)})
-                self.p_Transaction.tableWidgetProduct.removeRow(current_row)
+#                 choosing_row = self.p_Transaction.tableWidgetProduct.item(current_row, 0).text()
+# #Fix lại cái này lun
+#                 self.expenses_collection.delete_one({"Category": choosing_row})
+                # Biến 1 cái element trong array thành null
+                self.expenses_collection.update_one(
+                    {},
+                    {"$unset": {f"Username1.{current_row}": 1}}
+                )
+                #Xoa cai null element đó
+                self.expenses_collection.update_one(
+                    {},
+                    {"$pull": {"Username1": None}}
+                )
+                # self.p_Transaction.tableWidgetProduct.removeRow(current_row)
                 QMessageBox.information(self, "Success", "Product deleted successfully!")
+
                 self.load_data()
         else:
             QMessageBox.warning(self, "Warning", "Please select a product to delete")

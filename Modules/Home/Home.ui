@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Home</class>
+ <widget class="QMainWindow" name="Home">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -27,141 +27,6 @@
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_home">
-    <property name="geometry">
-     <rect>
-      <x>32</x>
-      <y>89</y>
-      <width>158</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(19, 23, 221);</string>
-    </property>
-    <property name="text">
-     <string>Home</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../Images/Home/Icon_Home.png</normaloff>../../Images/Home/Icon_Home.png</iconset>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_menu">
-    <property name="geometry">
-     <rect>
-      <x>77</x>
-      <y>21</y>
-      <width>70</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>16</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(52, 60, 106);
-font: 16pt &quot;Bahnschrift SemiLight&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Menu</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>21</y>
-      <width>25</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>C:/Users/LAPTOP/Downloads/Images/Images/Home/Icon_Menu.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_transaction">
-    <property name="geometry">
-     <rect>
-      <x>32</x>
-      <y>142</y>
-      <width>158</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(177, 177, 177);</string>
-    </property>
-    <property name="text">
-     <string>Transaction</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../Images/Home/Icon_Transaction.png</normaloff>../../Images/Home/Icon_Transaction.png</iconset>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_account">
-    <property name="geometry">
-     <rect>
-      <x>32</x>
-      <y>248</y>
-      <width>158</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(177, 177, 177);</string>
-    </property>
-    <property name="text">
-     <string>Account</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../Images/Home/Icon_Setting.png</normaloff>../../Images/Home/Icon_Setting.png</iconset>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_category">
-    <property name="geometry">
-     <rect>
-      <x>32</x>
-      <y>195</y>
-      <width>158</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(177, 177, 177);</string>
-    </property>
-    <property name="text">
-     <string>Category</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../Images/Home/Icon_Category.png</normaloff>../../Images/Home/Icon_Category.png</iconset>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -195,23 +60,6 @@ color: rgb(113, 142, 191)</string>
      <pixmap>../../Images/Home/Icon_MyBalance.png</pixmap>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_mybalance">
-    <property name="geometry">
-     <rect>
-      <x>389</x>
-      <y>86</y>
-      <width>120</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(35, 35, 35)</string>
-    </property>
-    <property name="text">
-     <string>$0</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
@@ -227,23 +75,6 @@ color: rgb(113, 142, 191)</string>
     </property>
     <property name="text">
      <string>Income</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_income">
-    <property name="geometry">
-     <rect>
-      <x>631</x>
-      <y>86</y>
-      <width>120</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(35, 35, 35)</string>
-    </property>
-    <property name="text">
-     <string>$0</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -279,23 +110,6 @@ color: rgb(113, 142, 191)</string>
      <string>Expense</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_expenses">
-    <property name="geometry">
-     <rect>
-      <x>888</x>
-      <y>86</y>
-      <width>120</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(35, 35, 35)</string>
-    </property>
-    <property name="text">
-     <string>$0</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
@@ -316,7 +130,7 @@ color: rgb(35, 35, 35)</string>
     <property name="geometry">
      <rect>
       <x>249</x>
-      <y>149</y>
+      <y>130</y>
       <width>261</width>
       <height>50</height>
      </rect>
@@ -333,7 +147,7 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>249</x>
-      <y>222</y>
+      <y>179</y>
       <width>157</width>
       <height>33</height>
      </rect>
@@ -362,7 +176,7 @@ color: rgb(0, 0, 0)</string>
     <property name="geometry">
      <rect>
       <x>406</x>
-      <y>222</y>
+      <y>179</y>
       <width>25</width>
       <height>25</height>
      </rect>
@@ -383,7 +197,7 @@ color: rgb(0, 0, 0)</string>
     <property name="geometry">
      <rect>
       <x>249</x>
-      <y>255</y>
+      <y>212</y>
       <width>450</width>
       <height>20</height>
      </rect>
@@ -400,9 +214,9 @@ color: rgb(113, 142, 191);</string>
     <property name="geometry">
      <rect>
       <x>248</x>
-      <y>293</y>
+      <y>230</y>
       <width>810</width>
-      <height>380</height>
+      <height>431</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -434,7 +248,7 @@ color:rgb(19, 23, 221)</string>
        <x>20</x>
        <y>50</y>
        <width>511</width>
-       <height>311</height>
+       <height>351</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="Columnchart"/>
@@ -445,7 +259,7 @@ color:rgb(19, 23, 221)</string>
        <x>550</x>
        <y>100</y>
        <width>251</width>
-       <height>251</height>
+       <height>301</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="Piechart"/>
@@ -471,8 +285,8 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>210</y>
+      <x>950</x>
+      <y>130</y>
       <width>80</width>
       <height>80</height>
      </rect>
@@ -487,6 +301,219 @@ color: rgb(19, 23, 221);</string>
      <pixmap>../../Images/Home/Icon_Robot.png</pixmap>
     </property>
    </widget>
+   <widget class="QLabel" name="Icon_menu">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>25</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Images/Home/Icon_Menu.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_menu">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(52, 60, 106);</string>
+    </property>
+    <property name="text">
+     <string>Menu</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>160</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QPushButton" name="pushButton_Home">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Home</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Home/Icon_Home.png</normaloff>../../Images/Home/Icon_Home.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Transaction_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Transaction</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Home/Icon_Transaction.png</normaloff>../../Images/Home/Icon_Transaction.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Category">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Category</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Category/Icon_Category.png</normaloff>../../Images/Category/Icon_Category.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Account">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>18</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Account</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Images/Home/Icon_Setting.png</normaloff>../../Images/Home/Icon_Setting.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>90</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>80</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>80</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -494,7 +521,7 @@ color: rgb(19, 23, 221);</string>
      <x>0</x>
      <y>0</y>
      <width>1080</width>
-     <height>21</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>
