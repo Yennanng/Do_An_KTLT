@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Login</class>
+ <widget class="QMainWindow" name="Login">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -26,36 +26,7 @@
    <string>Sign_in</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_frame">
-    <property name="geometry">
-     <rect>
-      <x>39</x>
-      <y>30</y>
-      <width>520</width>
-      <height>640</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>520</width>
-      <height>640</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>520</width>
-      <height>640</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(1, 14, 108);
-border-radius: 20px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="background">
+   <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -64,377 +35,880 @@ border-radius: 20px;</string>
       <height>720</height>
      </rect>
     </property>
-    <property name="minimumSize">
-     <size>
-      <width>1080</width>
-      <height>720</height>
-     </size>
+    <property name="currentIndex">
+     <number>1</number>
     </property>
-    <property name="maximumSize">
-     <size>
-      <width>1080</width>
-      <height>720</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift</family>
-      <pointsize>28</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Images/Login/BG.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>30</y>
-      <width>520</width>
-      <height>640</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>520</width>
-      <height>640</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>520</width>
-      <height>640</height>
-     </size>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QLabel" name="welcomeBack">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>105</y>
-       <width>341</width>
-       <height>60</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Bahnschrift SemiBold</family>
-       <pointsize>28</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 235, 0);</string>
-     </property>
-     <property name="text">
-      <string>Welcome Back  !</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>165</y>
-       <width>301</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+    <widget class="QWidget" name="page_Signin">
+     <widget class="QLabel" name="label_welcome">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>180</y>
+        <width>381</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>18</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(24, 20, 243);</string>
+      </property>
+      <property name="text">
+       <string>Welcome to the  application</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1080</width>
+        <height>720</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1080</width>
+        <height>720</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift</family>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Login/BG.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_app">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>130</y>
+        <width>461</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>28</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 13, 107);
+font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
+      </property>
+      <property name="text">
+       <string>FINANCE ASSISTANT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_frame">
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>30</y>
+        <width>520</width>
+        <height>640</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(1, 14, 108);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>520</width>
+        <height>640</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="welcomeBack">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>105</y>
+         <width>341</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>28</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 235, 0);</string>
+       </property>
+       <property name="text">
+        <string>Welcome Back  !</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>165</y>
+         <width>301</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
 color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>We are happy to have you back</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="labeuUserName">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>210</y>
-       <width>151</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+       </property>
+       <property name="text">
+        <string>We are happy to have you back</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labeuUserName">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>210</y>
+         <width>151</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
 color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>User Name*</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="labelPassWord">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>305</y>
-       <width>151</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+       </property>
+       <property name="text">
+        <string>User Name*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelPassWord">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>305</y>
+         <width>151</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
 color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Password*</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineUserName">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>250</y>
-       <width>331</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+       </property>
+       <property name="text">
+        <string>Password*</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineUserName">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>250</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
 color: rgb(134, 146, 166);
 border-radius: 5px</string>
-     </property>
-     <property name="text">
-      <string>Enter your name</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="linePassWord">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>345</y>
-       <width>331</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+       </property>
+       <property name="text">
+        <string>Enter your name</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="linePassWord">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>345</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
 color: rgb(134, 146, 166);
 border-radius: 5px</string>
-     </property>
-     <property name="text">
-      <string>Enter password</string>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::Password</enum>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushLogin">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>440</y>
-       <width>331</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+       </property>
+       <property name="text">
+        <string>Enter password</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushLogin">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>440</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
 color: rgb(0, 0, 0);
 background-color: rgb(255, 245, 217);
 border-radius: 5px</string>
-     </property>
-     <property name="text">
-      <string>Login</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>550</y>
-       <width>171</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>550</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
 color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Don’t have an account?</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkShowPassword">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>400</y>
-       <width>141</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);
+       </property>
+       <property name="text">
+        <string>Don’t have an account?</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkShowPassword">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>400</y>
+         <width>141</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
 font: 10pt &quot;Bahnschrift SemiLight&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Show password</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>55</x>
-       <y>35</y>
-       <width>100</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);
+       </property>
+       <property name="text">
+        <string>Show password</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>55</x>
+         <y>35</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 15px</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="logoUEL">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>35</y>
-       <width>30</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../Images/Login/LogoUEL.png</pixmap>
-     </property>
-    </widget>
-    <widget class="QLabel" name="logoUEL_2">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>35</y>
-       <width>30</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../Images/Login/LogoFIS.png</pixmap>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushSignup">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>560</y>
-       <width>75</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logoUEL">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>35</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Images/Login/LogoUEL.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logoUEL_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>35</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Images/Login/LogoFIS.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushSignup">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>560</y>
+         <width>75</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
 background-color: rgb(0, 13, 107);
 color: rgb(255, 235, 0);
 </string>
-     </property>
-     <property name="text">
-      <string>Sign up</string>
-     </property>
+       </property>
+       <property name="text">
+        <string>Sign up</string>
+       </property>
+      </widget>
+      <zorder>welcomeBack</zorder>
+      <zorder>labeuUserName</zorder>
+      <zorder>label_7</zorder>
+      <zorder>label_2</zorder>
+      <zorder>logoUEL</zorder>
+      <zorder>logoUEL_2</zorder>
+      <zorder>pushSignup</zorder>
+      <zorder>label</zorder>
+      <zorder>lineUserName</zorder>
+      <zorder>linePassWord</zorder>
+      <zorder>labelPassWord</zorder>
+      <zorder>checkShowPassword</zorder>
+      <zorder>pushLogin</zorder>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_Signup">
+     <widget class="QLabel" name="label_frame_2">
+      <property name="geometry">
+       <rect>
+        <x>39</x>
+        <y>30</y>
+        <width>520</width>
+        <height>640</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(1, 14, 108);
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_app_2">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>130</y>
+        <width>461</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>28</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 13, 107);
+font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
+      </property>
+      <property name="text">
+       <string>FINANCE ASSISTANT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushSign_in">
+      <property name="geometry">
+       <rect>
+        <x>305</x>
+        <y>590</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+background-color: rgb(0, 13, 107);
+color: rgb(255, 235, 0);
+</string>
+      </property>
+      <property name="text">
+       <string>Sign in</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_welcome_2">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>180</y>
+        <width>391</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiLight</family>
+        <pointsize>18</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(24, 20, 243);</string>
+      </property>
+      <property name="text">
+       <string>Welcome to the  application</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>520</width>
+        <height>640</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>520</width>
+        <height>640</height>
+       </size>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="creatAccount_2">
+       <property name="geometry">
+        <rect>
+         <x>85</x>
+         <y>65</y>
+         <width>391</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>28</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 235, 0);</string>
+       </property>
+       <property name="text">
+        <string>Create An Account</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelUsername_2">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>125</y>
+         <width>151</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>User name*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelCreatPassword_2">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>235</y>
+         <width>171</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Create password*</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelConfirm_2">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>350</y>
+         <width>171</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Confirm password*</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineUserName_3">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>165</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(134, 146, 166);
+border-radius: 5px</string>
+       </property>
+       <property name="text">
+        <string>Enter user name</string>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="linePassword_2">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>280</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(134, 146, 166);
+border-radius: 5px</string>
+       </property>
+       <property name="text">
+        <string>12345678</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineConfirm_2">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>395</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(134, 146, 166);
+border-radius: 5px</string>
+       </property>
+       <property name="text">
+        <string>12345678</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushRegister_2">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>500</y>
+         <width>331</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(255, 245, 217);
+border-radius: 5px</string>
+       </property>
+       <property name="text">
+        <string>Register Account</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>550</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Have an account?</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkShowPassword_3">
+       <property name="geometry">
+        <rect>
+         <x>95</x>
+         <y>450</y>
+         <width>141</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+font: 10pt &quot;Bahnschrift SemiLight&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Show password</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>55</x>
+         <y>35</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 15px</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logoUEL_5">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>35</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Images/Login/LogoUEL.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logoUEL_6">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>35</y>
+         <width>30</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../Images/Login/LogoFIS.png</pixmap>
+       </property>
+      </widget>
+      <zorder>label_9</zorder>
+      <zorder>label_5</zorder>
+      <zorder>logoUEL_5</zorder>
+      <zorder>logoUEL_6</zorder>
+      <zorder>lineUserName_3</zorder>
+      <zorder>labelUsername_2</zorder>
+      <zorder>creatAccount_2</zorder>
+      <zorder>linePassword_2</zorder>
+      <zorder>labelCreatPassword_2</zorder>
+      <zorder>labelConfirm_2</zorder>
+      <zorder>lineConfirm_2</zorder>
+      <zorder>checkShowPassword_3</zorder>
+      <zorder>pushRegister_2</zorder>
+     </widget>
+     <widget class="QLabel" name="background_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1080</width>
+        <height>720</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift</family>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Images/Login/BG.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1080</width>
+        <height>720</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>background_2</zorder>
+     <zorder>label_6</zorder>
+     <zorder>label_frame_2</zorder>
+     <zorder>label_app_2</zorder>
+     <zorder>pushSign_in</zorder>
+     <zorder>label_welcome_2</zorder>
+     <zorder>groupBox_2</zorder>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_welcome">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>180</y>
-      <width>381</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>18</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(24, 20, 243);</string>
-    </property>
-    <property name="text">
-     <string>Welcome to the  application</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_app">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>130</y>
-      <width>461</width>
-      <height>60</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>28</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 13, 107);
-font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
-    </property>
-    <property name="text">
-     <string>FINANCE ASSISTANT</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1080</width>
-      <height>720</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>1080</width>
-      <height>720</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>1080</width>
-      <height>720</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <zorder>label_3</zorder>
-   <zorder>label_frame</zorder>
-   <zorder>background</zorder>
-   <zorder>groupBox</zorder>
-   <zorder>label_welcome</zorder>
-   <zorder>label_app</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -442,7 +916,7 @@ font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1080</width>
-     <height>21</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

@@ -1,140 +1,112 @@
+import sys
 import numpy as np
-from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
-from Modules.Home.Home import Ui_MainWindow
-from Api.MainAPI import API
 import matplotlib.pyplot as plt
-from PyQt6.QtWidgets import QVBoxLayout, QMainWindow
 from datetime import datetime, timedelta
+from PyQt6.QtWidgets import QApplication, QVBoxLayout, QMainWindow
+from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
+from Modules.Home.Home import Ui_Home
+from Api.MainAPI import API
 
-from temp import week_days
 
+class HomeExt(QMainWindow, Ui_Home, API):
+    name = "siu"
 
-class HomeExt(QMainWindow, Ui_MainWindow,API):
-    name="siu"
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.connector() #Kết nối MongoDB
+        self.connector()  # Kết nối MongoDB
 
-    def setupUi(self,MainWindow):
-        super().setupUi(MainWindow)
-        self.MainWindow = MainWindow
-        MainWindow.setObjectName("MainWindow")
-        self.connector()
-        self.layoutPie = self.Piechart
-        self.layoutColumns = self.Columnchart
-        self.show_Pie_Chart(self.layoutPie)  # hiển thị biểu đồ tròn ở ô màu đỏ thứ hai
-        self.show_Colunm_Chart(self.layoutColumns)
+        # Kiểm tra và đảm bảo Piechart và Columnchart tồn tại
+        try:
+            self.layoutPie = self.Piechart
+            self.layoutColumns = self.Columnchart
+            self.show_Pie_Chart(self.layoutPie)  # Hiển thị biểu đồ tròn
+            self.show_Colunm_Chart(self.layoutColumns)  # Hiển thị biểu đồ cột
+        except AttributeError:
+            print("Lỗi: Không tìm thấy Piechart hoặc Columnchart trong UI!")
 
     def show_Pie_Chart(self, layout: QVBoxLayout):
-        # Dùng "$unwind" tách các elements trg Username1 thành từng doc lẻ
-        # Nhóm các doc chung Categories("_id":"$Username1.Categories")
-        # Cộng tổng Amount cho từng Categories ("$sum": "$Username1.Amount")
-        # Thay tên ng dùng vào Username1
+        # Pipeline truy vấn MongoDB
         pipeline = [
             {"$unwind": "$Username1"},
             {"$group": {"_id": None, "total_expenses": {"$sum": "$Username1.Amount"}}}
         ]
+        total_expenses = list(self.expenses_collection.aggregate(pipeline))
+        if not total_expenses:
+            print(" Không có dữ liệu chi tiêu để vẽ biểu đồ tròn!")
+            return
 
-        total_expenses = list(self.expenses_collection.aggregate(pipeline))[0]["total_expenses"]
+        total_expenses = total_expenses[0]["total_expenses"]
+
         category_pipeline = [
-            {"$unwind": "$Username1"},  # Tách dữ liệu trong Username1
-            {"$group": {"_id": "$Username1.Categories", "total": {"$sum": "$Username1.Amount"}}} #"_id" là bắt buộc nên k thể thay = category
+            {"$unwind": "$Username1"},
+            {"$group": {"_id": "$Username1.Categories", "total": {"$sum": "$Username1.Amount"}}}
         ]
         temp = list(self.expenses_collection.aggregate(category_pipeline))
-        total_expenses_by_category= {cate["_id"]:cate["total"] for cate in temp} #{"Foods":35000,"Drugs":50000}
+        if not temp:
+            print("Không có dữ liệu danh mục chi tiêu!")
+            return
 
-        #Set label cho Piechart
-        label = list(total_expenses_by_category.keys())
-        #Set size cho các pie trong piechart
-        value= list(total_expenses_by_category.values())
-        size=[i/total_expenses for i in value]
+        total_expenses_by_category = {cate["_id"]: cate["total"] for cate in temp}
 
-        # Tạo Figure và Axes để vẽ biểu đồ tròn
+        labels = list(total_expenses_by_category.keys())
+        values = list(total_expenses_by_category.values())
+        sizes = [i / total_expenses for i in values]
+
+        # Vẽ biểu đồ tròn
         fig, ax = plt.subplots(figsize=(5, 4))
-        # Màu sắc cho mỗi lát bánh (tham khảo Bootstrap 5 colors)
-        colors = ["#14B8A6", "#F59E0B", "#6366F1", "#3B82F6", "#3B82F6"]
-        ax.pie(size, labels=label, autopct='%1.1f%%', startangle=140)
-        ax.axis("equal") #đảm bảo piechart là hình tròn not elip
-        # Chuyển Figure thành widget Canvas
+        ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+        ax.axis("equal")
+
+        # Hiển thị trên UI
         canvas = FigureCanvas(fig)
-        # Thêm Canvas vào layout đã truyền vào
         layout.addWidget(canvas)
 
     def show_Colunm_Chart(self, layout: QVBoxLayout):
+        """ Vẽ biểu đồ cột theo dữ liệu từ MongoDB """
         try:
             category_pipeline = [
-                {"$unwind": "$Username1"},  # Tách dữ liệu trong Username1
+                {"$unwind": "$Username1"},
                 {"$group": {"_id": "$Username1.Date", "total_by_date": {"$sum": "$Username1.Amount"}}}
-                # "_id" là bắt buộc nên k thể thay = category
             ]
             temp = list(self.expenses_collection.aggregate(category_pipeline))
-            expenses_by_date= [{i["_id"]:i["total_by_date"]} for i in temp]
 
-            #Xác định 7 ngày gần nhất
+            if not temp:
+                print("Không có dữ liệu để vẽ biểu đồ cột!")
+                return
+
+            expenses_by_date = {i["_id"]: i["total_by_date"] for i in temp}
+
             today = datetime.today()
-            last_7_days = [(today - timedelta(days=i)).strftime("%m/%d/%Y") for i in range(7)][::-1]
+            last_7_days = [(today - timedelta(days=i)).strftime("%m-%d-%Y") for i in range(7)][::-1]
+            week_days = [(today - timedelta(days=i)).strftime("%A") for i in range(7)][::-1]
 
-            week_days=[] #Đây là biến cột x
-            for i in range(1, 8):
-                day = today - timedelta(days=i)
-                # print(str(day),type(day)) #trả về dạng date có d/m/y + time
-                week_days.append(day.strftime("%A"))
+            expenses_last_7_days = [expenses_by_date.get(day, 0) for day in last_7_days]
 
-            #chuẩn bị giá trị cho các label tứ
-            expenses_last_7_days = []
-            print("expenses_by_date:",expenses_by_date)
-            for i in last_7_days:
-                for c in expenses_by_date:
-                    try:
-                        if str(c[i]).isdigit():
-                            expenses_last_7_days.append(c[i])
-                        else:
-                            c[i] = 0
-                            expenses_last_7_days.append(c[i])
-                    except KeyError:
-                        pass
+            n_groups = len(last_7_days)
+            index = np.arange(n_groups)
 
-            # Vẽ Columnchart
-            n_groups = len(last_7_days)  # = 7
-            print("n_groups:", n_groups)
-            index = np.arange(n_groups)  # [0,1,2,3,4,5,6]
-            # # index=[1,2,3,4,5,6,7]
-            print("index:", len(index))
-            print("expenses_last_7_days:",len(expenses_last_7_days))
-            print("last_7_days:",len(last_7_days))
-            # bar_width = 0.5  # Độ rộng mỗi cột
-
-            # 3) Tạo Figure, Axes
-            plt.close('all')  # Đóng mọi figure cũ, tránh vẽ chồng
             fig, ax = plt.subplots(figsize=(6, 4))
-
-            # 4) Vẽ cột Expense (x = index) và Income (x = index + bar_width)
             ax.bar(index, expenses_last_7_days, color='#1814F3', label='Expense')
-            print("#*10")
-            # 5) Cài đặt trục X
-            if len(index) == len(week_days):
-                ax.set_xticks(index/2)  # Đặt nhãn ngày ở giữa 2 cột
-                ax.set_xticklabels(week_days, rotation=45)
-            else:
-                print("❌ Lỗi: Số lượng ticks và nhãn không khớp!")
-            try:
-                ax.set_ylim(0, max(tuple(expenses_last_7_days)) + 50)
-                ax.set_ylabel('Amount')
-                # ax.legend()
-                canvas = FigureCanvas(fig)
-                ax.set_xlabel('Day')
-                ax.set_title('Expense by Date in Weekdays')
-                ax.legend()
 
-                # Chuyển Figure thành widget Canvas
-                plt.tight_layout()
-                canvas = FigureCanvas(fig)
-                # Thêm Canvas vào layout đã truyền vào
+            ax.set_xticks(index)
+            ax.set_xticklabels(week_days, rotation=45)
+            ax.set_ylim(0, max(expenses_last_7_days) + 50)
+            ax.set_ylabel('Amount')
+            ax.set_xlabel('Date')
+            ax.set_title('Expense by Date in Weekdays')
+            ax.legend()
 
-                layout.addWidget(canvas)
-            except:
-                print("Loi")
-        except:
-            pass
+            plt.tight_layout()
+            canvas = FigureCanvas(fig)
+            layout.addWidget(canvas)
 
+        except Exception as e:
+            print("Lỗi khi vẽ biểu đồ cột:", e)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    home_window = HomeExt()
+    home_window.show()
+    sys.exit(app.exec())

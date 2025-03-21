@@ -1,10 +1,11 @@
 import sys
 
 from PyQt6.QtWidgets import QApplication, QMainWindow
-from Modules.Login.Sign_inEx import Sign_inEX
+# from Modules.Login.Sign_inEx import Sign_inEX
+from Modules.Home.Home_Ex import HomeExt
 
 app=QApplication([])
-myWindow=Sign_inEX()
+myWindow=HomeExt()
 myWindow.setupUi(QMainWindow())
 myWindow.show()
 app.exec()
