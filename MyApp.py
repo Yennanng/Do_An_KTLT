@@ -58,6 +58,8 @@ class MainWindow(QMainWindow):
             self.account_window.account.pushButton_Transaction.clicked.connect(self.open_transaction)
         if hasattr(self.account_window.account, "pushButton_Category"):
             self.account_window.account.pushButton_Category.clicked.connect(self.open_category)
+        if hasattr(self.account_window.account, "pushButton_Home"):
+            self.account_window.account.pushButton_Home.clicked.connect(self.open_home)
         if hasattr(self.login_window.p_Login, "pushLogin"):
             self.login_window.p_Login.pushLogin.clicked.connect(self.open_home)
 
