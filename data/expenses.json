@@ -1,9 +1,13 @@
-[{"Username1":[{"Categories": "Drugs","Details": "ăn", "Amount": 50000, "Date": "03-12-2025"},
+[{"Thien":[{"Categories": "Medicines","Details": "ăn", "Amount": 50000, "Date": "03-12-2025"},
   {"Categories": "Foods","Details": "ăn", "Amount": 95000, "Date": "03-18-2025"},
   {"Categories": "Transport","Details": "ăn", "Amount": 70000, "Date": "03-17-2025"},
-  {"Categories": "Drugs","Details": "ăn", "Amount": 35000, "Date": "03-16-2025"},
+  {"Categories": "Groceries","Details": "ăn", "Amount": 35000, "Date": "03-16-2025"},
   {"Categories": "Groceries","Details": "ăn", "Amount": 45000, "Date": "03-15-2025"},
-  {"Categories": "Food","Details": "ăn", "Amount": 20000, "Date": "03-14-2025"},
-  {"Categories": "Food","Details": "ăn", "Amount": 80000, "Date": "03-13-2025"},
+  {"Categories": "Foods","Details": "ăn", "Amount": 20000, "Date": "03-14-2025"},
+  {"Categories": "Foods","Details": "ăn", "Amount": 80000, "Date": "03-13-2025"},
   {"Categories": "Rent","Details": "ăn", "Amount": 50000, "Date": "03-13-2025"}]}
-,{"Username2":[{"Categories": "Drugs","Details": "ăn", "Amount": 50000, "Date": "02-13-2025"},{"Categories": "Foods","Details": "ăn", "Amount": 35000, "Date": "03-13-2025"}]}]
+,{"Yngan":[{"Categories": "Drugs","Details": "ăn", "Amount": 50000, "Date": "02-13-2025"},{"Categories": "Foods","Details": "ăn", "Amount": 35000, "Date": "03-13-2025"}]},
+  {"MDuyen": []}]
+
+
+
