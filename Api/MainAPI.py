@@ -2,9 +2,11 @@ from pymongo import MongoClient
 import os
 from dotenv import load_dotenv, find_dotenv
 
+
 class API:
-    def __init__(self):
+    def __init__(self, using_user = None):
         self.connector()
+        self.using_user = using_user
 
     def connector(self): #connect tới localhost MongoDB
         load_dotenv(find_dotenv())
@@ -32,5 +34,3 @@ class API:
                     expenses_data.append(temp)
         return expenses_data
 
-# a=API()
-# print(list(a.get_expenses_data()))
