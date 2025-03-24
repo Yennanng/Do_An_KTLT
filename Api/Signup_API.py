@@ -7,7 +7,7 @@ class SignupAPI(API):
         super().__init__()
         self.connector()
 
-    def check_user_signup(self, username, password, repassword ):
+    def check_user_signup(self, username, password, repassword):
         try:
             if username == '' or password == '' or repassword == '':
                 return 1 #Error 1: Username or password is empty
@@ -18,8 +18,10 @@ class SignupAPI(API):
             if user != None:
                 return 3 #Error 3: Username is already exist
 
-            self.users_collection.insert_one({'username': username, 'password': password})
+            self.expenses_collection.insert_one({username: []})
+            self.users_collection.insert_one({'username': username,"password": password})
             return 0 #Success in register
         except Exception as e:
             print(e)
             return str(e)
+
