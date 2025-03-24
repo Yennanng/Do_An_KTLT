@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1080</width>
-    <height>720</height>
+    <height>724</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,20 +24,20 @@
     <normaloff>GitClone/Do_an_cky_KTLT/Images/Home/Icon_Home.png</normaloff>GitClone/Do_an_cky_KTLT/Images/Home/Icon_Home.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color: rgb(250, 250, 250);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>170</y>
+      <y>120</y>
       <width>261</width>
       <height>50</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 32pt &quot;Bahnschrift SemiLight&quot;;
+     <string notr="true">font: 28pt &quot;Rockwell&quot;;
 color: rgb(19, 23, 221);</string>
     </property>
     <property name="text">
@@ -48,13 +48,16 @@ color: rgb(19, 23, 221);</string>
     <property name="geometry">
      <rect>
       <x>248</x>
-      <y>230</y>
-      <width>810</width>
-      <height>431</height>
+      <y>190</y>
+      <width>821</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(231, 237, 255);</string>
+     <string notr="true">
+
+
+background-color: rgb(232, 238, 251);</string>
     </property>
     <property name="title">
      <string/>
@@ -69,8 +72,8 @@ color: rgb(19, 23, 221);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 16pt &quot;Bahnschrift SemiLight&quot;;
-color:rgb(19, 23, 221)</string>
+      <string notr="true">color: rgb(19, 23, 221);
+font: 57 13pt &quot;Playfair Display Medium&quot;;</string>
      </property>
      <property name="text">
       <string>Weekly Activity</string>
@@ -81,8 +84,8 @@ color:rgb(19, 23, 221)</string>
       <rect>
        <x>20</x>
        <y>50</y>
-       <width>511</width>
-       <height>351</height>
+       <width>491</width>
+       <height>391</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="Columnchart"/>
@@ -90,10 +93,10 @@ color:rgb(19, 23, 221)</string>
     <widget class="QWidget" name="verticalLayoutWidget_2">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>530</x>
        <y>100</y>
-       <width>251</width>
-       <height>301</height>
+       <width>281</width>
+       <height>341</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="Piechart"/>
@@ -108,40 +111,21 @@ color:rgb(19, 23, 221)</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 14pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(19, 23, 221);</string>
+      <string notr="true">color: rgb(19, 23, 221);
+font: 57 13pt &quot;Playfair Display Medium&quot;;</string>
      </property>
      <property name="text">
       <string>Expenses Statistics</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>150</y>
-      <width>80</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::PlainText</enum>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../Images/Home/Icon_Robot.png</pixmap>
-    </property>
-   </widget>
    <widget class="QLabel" name="Icon_menu">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>40</y>
-      <width>25</width>
-      <height>25</height>
+      <width>35</width>
+      <height>35</height>
      </rect>
     </property>
     <property name="text">
@@ -162,12 +146,16 @@ color: rgb(19, 23, 221);</string>
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>18</pointsize>
+      <family>Rockwell</family>
+      <pointsize>17</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(52, 60, 106);</string>
+     <string notr="true">color: rgb(52, 60, 106);
+font: 17pt &quot;Rockwell&quot;;</string>
     </property>
     <property name="text">
      <string>Menu</string>
@@ -179,7 +167,7 @@ color: rgb(19, 23, 221);</string>
       <x>30</x>
       <y>90</y>
       <width>160</width>
-      <height>151</height>
+      <height>160</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -193,14 +181,17 @@ color: rgb(19, 23, 221);</string>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Rockwell</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 255);</string>
+        <string notr="true">color: rgb(0, 0, 255);
+font: 17pt &quot;Rockwell&quot;;
+</string>
        </property>
        <property name="text">
         <string>Home</string>
@@ -218,7 +209,7 @@ color: rgb(19, 23, 221);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_Transaction_2">
+      <widget class="QPushButton" name="pushButton_Transaction">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
          <horstretch>0</horstretch>
@@ -227,11 +218,15 @@ color: rgb(19, 23, 221);</string>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Rockwell</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 17pt &quot;Rockwell&quot;;</string>
        </property>
        <property name="text">
         <string>Transaction</string>
@@ -258,11 +253,15 @@ color: rgb(19, 23, 221);</string>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Rockwell</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 17pt &quot;Rockwell&quot;;</string>
        </property>
        <property name="text">
         <string>Category</string>
@@ -289,11 +288,15 @@ color: rgb(19, 23, 221);</string>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
-         <pointsize>18</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Rockwell</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 17pt &quot;Rockwell&quot;;</string>
        </property>
        <property name="text">
         <string>Account</string>
@@ -315,8 +318,8 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="label_mybalance">
     <property name="geometry">
      <rect>
-      <x>361</x>
-      <y>80</y>
+      <x>381</x>
+      <y>30</y>
       <width>108</width>
       <height>20</height>
      </rect>
@@ -329,12 +332,16 @@ color: rgb(19, 23, 221);</string>
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>12</pointsize>
+      <family>Rockwell</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(113, 142, 191);</string>
+     <string notr="true">color: rgb(113, 142, 191);
+font: 13pt &quot;Rockwell&quot;;</string>
     </property>
     <property name="text">
      <string>My Balance</string>
@@ -343,8 +350,8 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="label_income">
     <property name="geometry">
      <rect>
-      <x>615</x>
-      <y>80</y>
+      <x>635</x>
+      <y>30</y>
       <width>108</width>
       <height>20</height>
      </rect>
@@ -357,12 +364,16 @@ color: rgb(19, 23, 221);</string>
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>12</pointsize>
+      <family>Rockwell</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(113, 142, 191);</string>
+     <string notr="true">color: rgb(113, 142, 191);
+font: 13pt &quot;Rockwell&quot;;</string>
     </property>
     <property name="text">
      <string>Income</string>
@@ -371,8 +382,8 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="Icon_mybalance">
     <property name="geometry">
      <rect>
-      <x>271</x>
-      <y>80</y>
+      <x>291</x>
+      <y>30</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -393,8 +404,8 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="Icon_income">
     <property name="geometry">
      <rect>
-      <x>522</x>
-      <y>80</y>
+      <x>542</x>
+      <y>30</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -415,8 +426,8 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="Icon_expense">
     <property name="geometry">
      <rect>
-      <x>782</x>
-      <y>80</y>
+      <x>802</x>
+      <y>30</y>
       <width>70</width>
       <height>70</height>
      </rect>
@@ -437,11 +448,23 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="label_setincome">
     <property name="geometry">
      <rect>
-      <x>615</x>
-      <y>110</y>
+      <x>635</x>
+      <y>60</y>
       <width>141</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cambria Math</family>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;Cambria Math&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -450,11 +473,23 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="label_setmybalance">
     <property name="geometry">
      <rect>
-      <x>361</x>
-      <y>110</y>
+      <x>381</x>
+      <y>60</y>
       <width>141</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Cambria Math</family>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;Cambria Math&quot;;</string>
     </property>
     <property name="text">
      <string/>
@@ -463,8 +498,8 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="label_expense">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>80</y>
+      <x>890</x>
+      <y>30</y>
       <width>108</width>
       <height>20</height>
      </rect>
@@ -477,12 +512,16 @@ color: rgb(19, 23, 221);</string>
     </property>
     <property name="font">
      <font>
-      <family>Bahnschrift SemiLight</family>
-      <pointsize>12</pointsize>
+      <family>Rockwell</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(113, 142, 191);</string>
+     <string notr="true">color: rgb(113, 142, 191);
+font: 13pt &quot;Rockwell&quot;;</string>
     </property>
     <property name="text">
      <string>Expense</string>
@@ -491,14 +530,64 @@ color: rgb(19, 23, 221);</string>
    <widget class="QLabel" name="label_setexpense">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>110</y>
+      <x>890</x>
+      <y>60</y>
       <width>141</width>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Cambria Math</family>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;Cambria Math&quot;;</string>
+    </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>480</y>
+      <width>200</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Images/Transaction/trangtri.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Reset">
+    <property name="geometry">
+     <rect>
+      <x>924</x>
+      <y>142</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 13, 107);
+font: 63 14pt &quot;Sitka Heading Semibold&quot;;
+color: rgb(255, 255, 255);
+border-radius: 10px</string>
+    </property>
+    <property name="text">
+     <string>Reload</string>
     </property>
    </widget>
   </widget>
@@ -508,7 +597,7 @@ color: rgb(19, 23, 221);</string>
      <x>0</x>
      <y>0</y>
      <width>1080</width>
-     <height>18</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

@@ -1,21 +1,21 @@
 import sys
-from PyQt6.QtWidgets import QMainWindow, QApplication, QMessageBox, QLineEdit
+from PyQt6.QtWidgets import QMainWindow, QMessageBox, QLineEdit
 from Api.Login_API import LoginAPI
 from Api.Signup_API import SignupAPI
 from Modules.Login.Sign_in import Ui_Login
-from Modules.Transaction.Transaction import Ui_Transaction
 
-class Login_EX(QMainWindow):
+class Login_EX(QMainWindow,SignupAPI,LoginAPI):
+
     def __init__(self):
         super().__init__()
         self.p_Login = Ui_Login()
         self.p_Login.setupUi(self)
         self.LoginAPI = LoginAPI()
         self.SignupAPI = SignupAPI()
-        self.p_Transaction = Ui_Transaction()
 
     def setupUi(self):
-        self.p_Login.pushLogin.clicked.connect(self.login)
+        #Để cái nì thì nó sẽ thông báo x2
+        # self.p_Login.pushLogin.clicked.connect(self.login)
         self.p_Login.checkShowPassword.stateChanged.connect(self.show_password)
         self.p_Login.pushSignup.clicked.connect(self.open_signup)
         self.p_Login.stackedWidget.setCurrentWidget(self.p_Login.page_Signin)
@@ -37,8 +37,12 @@ class Login_EX(QMainWindow):
                 QMessageBox.warning(self, "Error", "Error 2: User not found")
             case 3:
                 QMessageBox.warning(self, "Error", "Error 3: Incorrect Username or Password")
-            case 0:
+            case _:
                 QMessageBox.information(self, "Success", "Login successful!")
+                self.using_username = username
+                print("Thông tin username đã cập nhập")
+                print(self.using_username)
+                return username #Để tạm thời chứ tí phải thay bằng tên người dùng
 
     def show_password(self):
         """ Hiển thị hoặc ẩn mật khẩu """
@@ -83,10 +87,3 @@ class Login_EX(QMainWindow):
                 QMessageBox.information(self, "Success", "Registration successful!")
                 self.p_Login.stackedWidget.setCurrentWidget(self.p_Login.page_Signin)  # Quay về trang đăng nhập sau khi đăng ký thành công
 
-if __name__ == "__main__":
-    import sys
-    app = QApplication(sys.argv)
-    login_window = Login_EX()
-    login_window.setupUi()
-    login_window.show()
-    sys.exit(app.exec())

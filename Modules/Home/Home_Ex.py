@@ -1,20 +1,25 @@
-import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
-from PyQt6.QtWidgets import QApplication, QVBoxLayout, QMainWindow
+
+from PyQt6.QtCore import QTimer
+from PyQt6.QtWidgets import QVBoxLayout, QMainWindow
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 from Modules.Home.Home import Ui_Home
-from Api.MainAPI import API
+from Api.Login_API import LoginAPI
 
+class HomeExt(QMainWindow, Ui_Home,LoginAPI):
 
-class HomeExt(QMainWindow, Ui_Home, API):
-    name = "siu"
-
-    def __init__(self):
+    def __init__(self,using_user=None):
         super().__init__()
         self.setupUi(self)
-        self.connector()  # Kết nối MongoDB
+        self.connector() # Kết nối MongoDB
+        self.using_user = using_user
+        self.update_income_saving()
+        self.update_total()
+        self.update_balance()
+        print("ở bên HomeEx, usingname đang có tên là:",self.using_user)
+
 
         # Kiểm tra và đảm bảo Piechart và Columnchart tồn tại
         try:
@@ -22,16 +27,96 @@ class HomeExt(QMainWindow, Ui_Home, API):
             self.layoutColumns = self.Columnchart
             self.show_Pie_Chart(self.layoutPie)  # Hiển thị biểu đồ tròn
             self.show_Colunm_Chart(self.layoutColumns)  # Hiển thị biểu đồ cột
-        except AttributeError:
-            print("Lỗi: Không tìm thấy Piechart hoặc Columnchart trong UI!")
+        except Exception as e:
+            print(e)
+
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.update_all)
+        self.timer.start(5000)
+
+        # Kết nối nút Reset
+        if hasattr(self, "pushButton_Reset"):
+            self.pushButton_Reset.clicked.connect(self.reset_charts)
+
+    def update_all(self):
+        """Gọi cả 3 hàm cập nhật cùng lúc"""
+        self.update_income_saving()
+        self.update_total()
+        self.update_balance()
+
+    def update_income_saving(self):
+        """Lấy income và saving từ MongoDB và cập nhật lên giao diện."""
+        user_data = self.users_collection.find_one({"username": self.using_user}, {"income": 1, "_id": 0})
+
+        if user_data:
+            income = user_data.get("income", 0)
+
+            self.label_setincome.setText(f"{income}")
+        else:
+            self.label_setincome.setText("Income: N/A")
+
+    def update_total(self):
+        """Tính tổng Amount của người dùng và cập nhật vào label_setexpense"""
+        pipeline = [
+            {"$unwind": f"${self.using_user}"},
+            {"$group": {"_id": None, "total_expenses": {"$sum": f"${self.using_user}.Amount"}}}
+        ]
+
+        total_expenses = list(self.expenses_collection.aggregate(pipeline))
+
+        if total_expenses:  # Kiểm tra xem có dữ liệu không
+            total_expenses_value = total_expenses[0]["total_expenses"]
+            self.label_setexpense.setText(f"{total_expenses_value}")
+        else:
+            self.label_setexpense.setText("0")  # Nếu không có dữ liệu, hiển thị 0
+
+    def update_balance(self):
+        """Tính Balance = Income - Expense và cập nhật vào label_setmybalance"""
+
+        # Lấy giá trị từ label_setincome và label_setexpense, nếu rỗng thì mặc định là 0
+        income_text = self.label_setincome.text().strip()
+        expense_text = self.label_setexpense.text().strip()
+
+        # Chuyển đổi sang số (mặc định là 0 nếu không hợp lệ)
+        income = float(income_text) if income_text.replace('.', '', 1).isdigit() else 0
+        expense = float(expense_text) if expense_text.replace('.', '', 1).isdigit() else 0
+
+        # Tính toán Balance
+        balance = income - expense
+
+        # Cập nhật vào label_setmybalance
+        self.label_setmybalance.setText(f"{balance}")
+
+    def reset_charts(self):
+        """Xóa và vẽ lại biểu đồ"""
+        self.clear_layout(self.layoutPie)
+        self.clear_layout(self.layoutColumns)
+        self.show_Pie_Chart(self.layoutPie)
+        self.show_Colunm_Chart(self.layoutColumns)
+
+
+    def clear_layout(self, layout):
+        """Xóa tất cả widget trong layout"""
+        while layout.count():
+            item = layout.takeAt(0)
+            widget = item.widget()
+            if widget:
+                widget.deleteLater()
 
     def show_Pie_Chart(self, layout: QVBoxLayout):
+        # Xóa biểu đồ cũ
+        for i in reversed(range(layout.count())):
+            widget = layout.itemAt(i).widget()
+            if widget:
+                widget.setParent(None)
         # Pipeline truy vấn MongoDB
+        print("Tên ng dùng đang dùng:",self.using_user)
         pipeline = [
-            {"$unwind": "$Username1"},
-            {"$group": {"_id": None, "total_expenses": {"$sum": "$Username1.Amount"}}}
+            {"$unwind": f"${self.using_user}"},
+            {"$group": {"_id": None, "total_expenses": {"$sum": f"${self.using_user}.Amount"}}}
         ]
         total_expenses = list(self.expenses_collection.aggregate(pipeline))
+        print("Data để vẽ piechart",total_expenses)
         if not total_expenses:
             print(" Không có dữ liệu chi tiêu để vẽ biểu đồ tròn!")
             return
@@ -39,8 +124,8 @@ class HomeExt(QMainWindow, Ui_Home, API):
         total_expenses = total_expenses[0]["total_expenses"]
 
         category_pipeline = [
-            {"$unwind": "$Username1"},
-            {"$group": {"_id": "$Username1.Categories", "total": {"$sum": "$Username1.Amount"}}}
+            {"$unwind": f"${self.using_user}"},
+            {"$group": {"_id": f"${self.using_user}.Categories", "total": {"$sum": f"${self.using_user}.Amount"}}}
         ]
         temp = list(self.expenses_collection.aggregate(category_pipeline))
         if not temp:
@@ -63,11 +148,17 @@ class HomeExt(QMainWindow, Ui_Home, API):
         layout.addWidget(canvas)
 
     def show_Colunm_Chart(self, layout: QVBoxLayout):
-        """ Vẽ biểu đồ cột theo dữ liệu từ MongoDB """
+        """ Vẽ biểu đồ cột theo dữ liệu từ MongoDB với tính năng hover để hiển thị giá trị """
         try:
+            # Xóa biểu đồ cũ
+            for i in reversed(range(layout.count())):
+                widget = layout.itemAt(i).widget()
+                if widget:
+                    widget.setParent(None)
+
             category_pipeline = [
-                {"$unwind": "$Username1"},
-                {"$group": {"_id": "$Username1.Date", "total_by_date": {"$sum": "$Username1.Amount"}}}
+                {"$unwind": f"${self.using_user}"},
+                {"$group": {"_id": f"${self.using_user}.Date", "total_by_date": {"$sum": f"${self.using_user}.Amount"}}}
             ]
             temp = list(self.expenses_collection.aggregate(category_pipeline))
 
@@ -87,7 +178,7 @@ class HomeExt(QMainWindow, Ui_Home, API):
             index = np.arange(n_groups)
 
             fig, ax = plt.subplots(figsize=(6, 4))
-            ax.bar(index, expenses_last_7_days, color='#1814F3', label='Expense')
+            bars = ax.bar(index, expenses_last_7_days, color='#1814F3', label='Expense')
 
             ax.set_xticks(index)
             ax.set_xticklabels(week_days, rotation=45)
@@ -101,12 +192,33 @@ class HomeExt(QMainWindow, Ui_Home, API):
             canvas = FigureCanvas(fig)
             layout.addWidget(canvas)
 
+            # Thêm annotation để hiển thị giá trị khi hover
+            annot = ax.annotate("", xy=(0, 0), xytext=(10, 10), textcoords="offset points",
+                                bbox=dict(boxstyle="round", fc="w"),
+                                arrowprops=dict(arrowstyle="->"))
+            annot.set_visible(False)
+
+            def update_annot(bar, event):
+                """Cập nhật vị trí annotation khi hover"""
+                x = bar.get_x() + bar.get_width() / 2
+                y = bar.get_height()
+                annot.xy = (x, y)
+                annot.set_text(f"{y:,.0f} VND")  # Hiển thị số tiền với định dạng dễ đọc
+                annot.set_visible(True)
+                canvas.draw_idle()
+
+            def on_hover(event):
+                """Xử lý sự kiện hover chuột"""
+                vis = annot.get_visible()
+                for bar in bars:
+                    if bar.contains(event)[0]:
+                        update_annot(bar, event)
+                        return
+                if vis:
+                    annot.set_visible(False)
+                    canvas.draw_idle()
+
+            canvas.mpl_connect("motion_notify_event", on_hover)
+
         except Exception as e:
             print("Lỗi khi vẽ biểu đồ cột:", e)
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    home_window = HomeExt()
-    home_window.show()
-    sys.exit(app.exec())
