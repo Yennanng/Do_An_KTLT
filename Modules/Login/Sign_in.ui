@@ -50,14 +50,16 @@
       </property>
       <property name="font">
        <font>
-        <family>Bahnschrift SemiLight</family>
-        <pointsize>18</pointsize>
+        <family>Palace Script MT</family>
+        <pointsize>36</pointsize>
         <weight>50</weight>
+        <italic>true</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(24, 20, 243);</string>
+       <string notr="true">font: italic 36pt &quot;Palace Script MT&quot;;
+color: rgb(77, 85, 204);</string>
       </property>
       <property name="text">
        <string>Welcome to the  application</string>
@@ -127,32 +129,6 @@
        <pixmap>../../Images/Login/BG.png</pixmap>
       </property>
      </widget>
-     <widget class="QLabel" name="label_app">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>130</y>
-        <width>461</width>
-        <height>60</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bahnschrift SemiLight</family>
-        <pointsize>28</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 13, 107);
-font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
-      </property>
-      <property name="text">
-       <string>FINANCE ASSISTANT</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_frame">
       <property name="geometry">
        <rect>
@@ -217,14 +193,16 @@ border-radius: 20px;</string>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
-         <pointsize>28</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Cooper Black</family>
+         <pointsize>25</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 235, 0);</string>
+        <string notr="true">color: rgb(255, 235, 0);
+font: 25pt &quot;Cooper Black&quot;;</string>
        </property>
        <property name="text">
         <string>Welcome Back  !</string>
@@ -240,7 +218,7 @@ border-radius: 20px;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 63 11pt &quot;Comfortaa SemiBold&quot;;
 color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
@@ -251,13 +229,13 @@ color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>95</x>
-         <y>210</y>
+         <y>220</y>
          <width>151</width>
          <height>24</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 63 11pt &quot;Comfortaa SemiBold&quot;;
 color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
@@ -268,13 +246,13 @@ color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>95</x>
-         <y>305</y>
+         <y>320</y>
          <width>151</width>
          <height>24</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 63 11pt &quot;Comfortaa SemiBold&quot;;
 color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
@@ -285,36 +263,36 @@ color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>95</x>
-         <y>250</y>
+         <y>260</y>
          <width>331</width>
          <height>41</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(134, 146, 166);
+        <string notr="true">font: 14pt &quot;Roboto&quot;;
+color: rgb(106, 106, 106);
 border-radius: 5px</string>
        </property>
        <property name="text">
-        <string>Enter your name</string>
+        <string/>
        </property>
       </widget>
       <widget class="QLineEdit" name="linePassWord">
        <property name="geometry">
         <rect>
          <x>95</x>
-         <y>345</y>
+         <y>360</y>
          <width>331</width>
          <height>41</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(134, 146, 166);
+        <string notr="true">font: 14pt &quot;Roboto&quot;;
+color: rgb(106, 106, 106);
 border-radius: 5px</string>
        </property>
        <property name="text">
-        <string>Enter password</string>
+        <string/>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -324,13 +302,13 @@ border-radius: 5px</string>
        <property name="geometry">
         <rect>
          <x>95</x>
-         <y>440</y>
+         <y>470</y>
          <width>331</width>
          <height>41</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 12pt &quot;Arial Rounded MT Bold&quot;;
 color: rgb(0, 0, 0);
 background-color: rgb(255, 245, 217);
 border-radius: 5px</string>
@@ -339,35 +317,18 @@ border-radius: 5px</string>
         <string>Login</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_7">
-       <property name="geometry">
-        <rect>
-         <x>95</x>
-         <y>550</y>
-         <width>171</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>Don’t have an account?</string>
-       </property>
-      </widget>
       <widget class="QCheckBox" name="checkShowPassword">
        <property name="geometry">
         <rect>
          <x>95</x>
-         <y>400</y>
+         <y>428</y>
          <width>141</width>
          <height>17</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-font: 10pt &quot;Bahnschrift SemiLight&quot;;</string>
+font: 63 9pt &quot;Comfortaa SemiBold&quot;;</string>
        </property>
        <property name="text">
         <string>Show password</string>
@@ -425,14 +386,14 @@ border-radius: 15px</string>
       <widget class="QPushButton" name="pushSignup">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>560</y>
+         <x>290</x>
+         <y>568</y>
          <width>75</width>
          <height>25</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 10pt &quot;Arial Rounded MT Bold&quot;;
 background-color: rgb(0, 13, 107);
 color: rgb(255, 235, 0);
 </string>
@@ -441,9 +402,25 @@ color: rgb(255, 235, 0);
         <string>Sign up</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>560</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Bahnschrift SemiLight&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Don’t have an account?</string>
+       </property>
+      </widget>
       <zorder>welcomeBack</zorder>
       <zorder>labeuUserName</zorder>
-      <zorder>label_7</zorder>
       <zorder>label_2</zorder>
       <zorder>logoUEL</zorder>
       <zorder>logoUEL_2</zorder>
@@ -454,13 +431,42 @@ color: rgb(255, 235, 0);
       <zorder>labelPassWord</zorder>
       <zorder>checkShowPassword</zorder>
       <zorder>pushLogin</zorder>
+      <zorder>label_10</zorder>
+     </widget>
+     <widget class="QLabel" name="label_app">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>110</y>
+        <width>461</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Perpetua</family>
+        <pointsize>36</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 13, 107);
+
+
+font: 36pt &quot;Perpetua&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FINANCE ASSISTANT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
      </widget>
      <zorder>label_3</zorder>
      <zorder>background</zorder>
-     <zorder>label_app</zorder>
      <zorder>label_frame</zorder>
      <zorder>groupBox</zorder>
      <zorder>label_welcome</zorder>
+     <zorder>label_app</zorder>
     </widget>
     <widget class="QWidget" name="page_Signup">
      <widget class="QLabel" name="label_frame_2">
@@ -490,56 +496,6 @@ border-radius: 20px;</string>
       </property>
       <property name="text">
        <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_app_2">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>130</y>
-        <width>461</width>
-        <height>60</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bahnschrift SemiLight</family>
-        <pointsize>28</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(0, 13, 107);
-font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
-      </property>
-      <property name="text">
-       <string>FINANCE ASSISTANT</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_welcome_2">
-      <property name="geometry">
-       <rect>
-        <x>690</x>
-        <y>180</y>
-        <width>391</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Bahnschrift SemiLight</family>
-        <pointsize>18</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(24, 20, 243);</string>
-      </property>
-      <property name="text">
-       <string>Welcome to the  application</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupBox_2">
@@ -577,14 +533,16 @@ font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
-         <pointsize>28</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Cooper Black</family>
+         <pointsize>25</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 235, 0);</string>
+        <string notr="true">color: rgb(255, 235, 0);
+font: 25pt &quot;Cooper Black&quot;;</string>
        </property>
        <property name="text">
         <string>Create An Account</string>
@@ -600,7 +558,7 @@ font: 28pt &quot;Bahnschrift SemiLight&quot;;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 63 11pt &quot;Comfortaa SemiBold&quot;;
 color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
@@ -617,7 +575,7 @@ color: rgb(255, 255, 255);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 63 11pt &quot;Comfortaa SemiBold&quot;;
 color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
@@ -634,7 +592,7 @@ color: rgb(255, 255, 255);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 63 11pt &quot;Comfortaa SemiBold&quot;;
 color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
@@ -651,12 +609,12 @@ color: rgb(255, 255, 255);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(134, 146, 166);
+        <string notr="true">font: 14pt &quot;Roboto&quot;;
+color: rgb(106, 106, 106);
 border-radius: 5px</string>
        </property>
        <property name="text">
-        <string>Enter user name</string>
+        <string/>
        </property>
        <property name="dragEnabled">
         <bool>false</bool>
@@ -675,12 +633,12 @@ border-radius: 5px</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(134, 146, 166);
+        <string notr="true">font: 14pt &quot;Roboto&quot;;
+color: rgb(106, 106, 106);
 border-radius: 5px</string>
        </property>
        <property name="text">
-        <string>12345678</string>
+        <string/>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -696,12 +654,12 @@ border-radius: 5px</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
-color: rgb(134, 146, 166);
+        <string notr="true">font: 14pt &quot;Roboto&quot;;
+color: rgb(106, 106, 106);
 border-radius: 5px</string>
        </property>
        <property name="text">
-        <string>12345678</string>
+        <string/>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -717,7 +675,7 @@ border-radius: 5px</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 11pt &quot;Bahnschrift SemiLight&quot;;
+        <string notr="true">font: 12pt &quot;Arial Rounded MT Bold&quot;;
 color: rgb(0, 0, 0);
 background-color: rgb(255, 245, 217);
 border-radius: 5px</string>
@@ -730,7 +688,7 @@ border-radius: 5px</string>
        <property name="geometry">
         <rect>
          <x>130</x>
-         <y>550</y>
+         <y>560</y>
          <width>141</width>
          <height>41</height>
         </rect>
@@ -754,7 +712,7 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-font: 10pt &quot;Bahnschrift SemiLight&quot;;</string>
+font: 63 9pt &quot;Comfortaa SemiBold&quot;;</string>
        </property>
        <property name="text">
         <string>Show password</string>
@@ -812,26 +770,28 @@ border-radius: 15px</string>
       <widget class="QPushButton" name="pushButton_Signin">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>560</y>
+         <x>290</x>
+         <y>570</y>
          <width>81</width>
          <height>21</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <family>Bahnschrift SemiBold</family>
+         <family>Arial Rounded MT Bold</family>
          <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(1, 14, 108);
-color: rgb(255, 255, 0);</string>
+color: rgb(255, 235, 0);
+font: 10pt &quot;Arial Rounded MT Bold&quot;;</string>
        </property>
        <property name="text">
-        <string>Signin</string>
+        <string>Sign in</string>
        </property>
       </widget>
       <zorder>label_9</zorder>
@@ -916,12 +876,66 @@ color: rgb(255, 255, 0);</string>
        <string/>
       </property>
      </widget>
+     <widget class="QLabel" name="label_app_2">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>110</y>
+        <width>461</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Perpetua</family>
+        <pointsize>36</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 13, 107);
+
+
+font: 36pt &quot;Perpetua&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;FINANCE ASSISTANT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_welcome_2">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>180</y>
+        <width>381</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Palace Script MT</family>
+        <pointsize>36</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: italic 36pt &quot;Palace Script MT&quot;;
+color: rgb(77, 85, 204);</string>
+      </property>
+      <property name="text">
+       <string>Welcome to the  application</string>
+      </property>
+     </widget>
      <zorder>label_6</zorder>
      <zorder>label_frame_2</zorder>
-     <zorder>label_app_2</zorder>
-     <zorder>label_welcome_2</zorder>
      <zorder>background_2</zorder>
      <zorder>groupBox_2</zorder>
+     <zorder>label_app_2</zorder>
+     <zorder>label_welcome_2</zorder>
     </widget>
    </widget>
   </widget>
@@ -931,7 +945,7 @@ color: rgb(255, 255, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>1080</width>
-     <height>18</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
