@@ -12,16 +12,16 @@
 ## Hướng dẫn sử dụng
 ### 1. Cài đặt ứng dụng
 Chạy lệnh sau để thiết lập môi trường và cấu hình dữ liệu ban đầu:
-```
-python setup.py
-```
+
+**python setup.py**
+
 
 ### 2. Khởi động ứng dụng
 Sau khi hoàn tất cài đặt, chạy ứng dụng bằng lệnh:
 
-```
-python MyApp.py
-```
+
+**python MyApp.py**
+
 Giao diện chính sẽ xuất hiện để bạn bắt đầu quản lý chi tiêu của mình.
 
 ![img.png](img.png)
