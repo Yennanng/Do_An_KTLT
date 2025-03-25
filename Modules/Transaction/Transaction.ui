@@ -238,7 +238,7 @@ font: 17pt &quot;Rockwell&quot;;
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_Transaction1">
      <widget class="QLabel" name="label_income">
@@ -634,50 +634,6 @@ color: rgb(19, 23, 221);</string>
      </widget>
     </widget>
     <widget class="QWidget" name="page_Transaction2">
-     <widget class="QLabel" name="Icon_mybalance_4">
-      <property name="geometry">
-       <rect>
-        <x>81</x>
-        <y>30</y>
-        <width>70</width>
-        <height>70</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>70</width>
-        <height>70</height>
-       </size>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../Images/Home/Icon_MyBalance.png</pixmap>
-      </property>
-     </widget>
-     <widget class="QLabel" name="Icon_expense_4">
-      <property name="geometry">
-       <rect>
-        <x>592</x>
-        <y>30</y>
-        <width>70</width>
-        <height>70</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>70</width>
-        <height>70</height>
-       </size>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../Images/Home/Icon_Expenses.png</pixmap>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_16">
       <property name="geometry">
        <rect>
@@ -780,38 +736,6 @@ color: rgb(9, 48, 48);</string>
         <width>50</width>
         <height>50</height>
        </size>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_income_4">
-      <property name="geometry">
-       <rect>
-        <x>425</x>
-        <y>30</y>
-        <width>108</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>88</width>
-        <height>20</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Rockwell</family>
-        <pointsize>13</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(113, 142, 191);
-font: 13pt &quot;Rockwell&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Income</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Amount">
@@ -1023,7 +947,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>160</y>
+        <y>180</y>
         <width>810</width>
         <height>471</height>
        </rect>
@@ -1034,92 +958,6 @@ border-radius: 20px</string>
       </property>
       <property name="text">
        <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="Icon_income_4">
-      <property name="geometry">
-       <rect>
-        <x>332</x>
-        <y>30</y>
-        <width>70</width>
-        <height>70</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>70</width>
-        <height>70</height>
-       </size>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="pixmap">
-       <pixmap>../../Images/Home/Icon_Income.png</pixmap>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_mybalance_4">
-      <property name="geometry">
-       <rect>
-        <x>171</x>
-        <y>30</y>
-        <width>108</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>108</width>
-        <height>20</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Rockwell</family>
-        <pointsize>13</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(113, 142, 191);
-font: 13pt &quot;Rockwell&quot;;</string>
-      </property>
-      <property name="text">
-       <string>My Balance</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_expense_4">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>30</y>
-        <width>108</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>88</width>
-        <height>20</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Rockwell</family>
-        <pointsize>13</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(113, 142, 191);
-font: 13pt &quot;Rockwell&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Expense</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="radioButton_Food">
@@ -1174,54 +1012,6 @@ color: rgb(9, 48, 48);</string>
        <string>Category</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_setmybalance_2">
-      <property name="geometry">
-       <rect>
-        <x>171</x>
-        <y>60</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 18pt &quot;Cambria Math&quot;;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_setincome_2">
-      <property name="geometry">
-       <rect>
-        <x>425</x>
-        <y>60</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 18pt &quot;Cambria Math&quot;;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_setexpense_2">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>60</y>
-        <width>141</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 18pt &quot;Cambria Math&quot;;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton_save_2">
       <property name="geometry">
        <rect>
@@ -1255,14 +1045,28 @@ border-radius: 10px</string>
 color: rgb(255, 255, 255);</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>120</y>
+        <width>261</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 28pt &quot;Rockwell&quot;;
+color: rgb(19, 23, 221);</string>
+      </property>
+      <property name="text">
+       <string>Transaction</string>
+      </property>
+     </widget>
      <zorder>label_20</zorder>
-     <zorder>Icon_mybalance_4</zorder>
-     <zorder>Icon_expense_4</zorder>
      <zorder>label_16</zorder>
      <zorder>radioButton_Medicine</zorder>
      <zorder>label_17</zorder>
      <zorder>radioButton_Groceries</zorder>
-     <zorder>label_income_4</zorder>
      <zorder>lineEdit_Amount</zorder>
      <zorder>label_18</zorder>
      <zorder>radioButton_Saving</zorder>
@@ -1271,16 +1075,11 @@ color: rgb(255, 255, 255);</string>
      <zorder>lineEdit_Details</zorder>
      <zorder>radioButton_Entertainment</zorder>
      <zorder>radioButton_Transport</zorder>
-     <zorder>Icon_income_4</zorder>
-     <zorder>label_mybalance_4</zorder>
-     <zorder>label_expense_4</zorder>
      <zorder>radioButton_Food</zorder>
      <zorder>label_21</zorder>
-     <zorder>label_setmybalance_2</zorder>
-     <zorder>label_setincome_2</zorder>
-     <zorder>label_setexpense_2</zorder>
      <zorder>pushButton_save_2</zorder>
      <zorder>dateEdit</zorder>
+     <zorder>label_9</zorder>
     </widget>
    </widget>
    <widget class="QLabel" name="label_22">
